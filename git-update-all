@@ -1,0 +1,8 @@
+#!/bin/bash
+# sort of like svn-update-all
+git clean -dfx
+git reset --hard
+git commit -a
+git push
+git pull
+
