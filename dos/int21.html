@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+All INT 21h functions, ordered by function call number (value of AH on entry).
+Some functions have a subfunction (AL). If any other registers control the
+function on entry, they are listed as well.
+
+The minimum DOS version required is included for reference.
+
+═══════════════════════════════════════════════════════════════════════════════
+Ver  │ Func   │ Function
+─────┴────────┴────────────────────────────────────────────────────────────────
+1.0+   AH=00H   Terminate a Program
+1.0+   AH=01H   Keyboard Input
+1.0+   AH=02H   Display Output
+1.0+   AH=03H   Auxiliary Input
+1.0+   AH=04H   Auxiliary Output
+1.0+   AH=05H   Printer Output
+1.0+   AH=06H   Console I/O
+1.0+   AH=07H   No Echo Unfiltered Console Input
+1.0+   AH=08H   No Echo Console Input
+1.0+   AH=09H   Display String
+1.0+   AH=0aH   Buffered String Input
+1.0+   AH=0bH   Check Input Status
+1.0+   AH=0cH   Clear &amp; Input
+1.0+   AH=0dH   Reset Disk
+1.0+   AH=0eH   Select DOS Default Disk
+1.0+   AH=0fH   Open File via FCB
+1.0+   AH=10H   Close File via FCB
+1.0+   AH=11H   Find 1st Matching File via FCB
+1.0+   AH=12H   Find Next Matching File via FCB
+1.0+   AH=13H   Delete File via FCB
+1.0+   AH=14H   Read Sequential File via FCB
+1.0+   AH=15H   Write Sequential File via FCB
+1.0+   AH=16H   Create File via FCB
+1.0+   AH=17H   Rename File via FCB
+?.?    AH=18H   (unknown)                                         ◄obsolete►
+1.0+   AH=19H   Query DOS Default Disk
+1.0+   AH=1aH   Set Disk Transfer Address (DTA)
+1.0+   AH=1bH   Get Drive Info (current disk)
+2.0+   AH=1cH   Get Drive Info (any disk)
+?.?    AH=1dH   (unknown)                                         ◄obsolete►
+?.?    AH=1eH   (unknown)                                         ◄obsolete►
+2.0+   AH=1fH   Get Drive Parameter Block (current disk)          ◄wasUndoc►
+?.?    AH=20H   (unknown)                                         ◄obsolete►
+1.0+   AH=21H   Read Random File Record
+1.0+   AH=22H   Write Random File Record
+1.0+   AH=23H   Query File Size via FCB
+1.0+   AH=24H   Set Random File Block Address
+1.0+   AH=25H   Set Interrupt Vector
+1.0+   AH=26H   Create Program Segment Prefix
+1.0+   AH=27H   Read Random File Block
+1.0+   AH=28H   Write Random File Block
+1.0+   AH=29H   Parse Filename
+1.0+   AH=2aH   Query DOS Date
+1.0+   AH=2bH   Set DOS Date
+1.0+   AH=2cH   Query DOS Time
+1.0+   AH=2dH   Set DOS Time
+1.0+   AH=2eH   Set/Reset Verify Switch
+2.0+   AH=2fH   Query Disk Transfer Address (DTA)
+2.0+   AH=30H   Get DOS Version Number
+2.0+   AH=31H   Terminate &amp; Stay Resident
+2.0+   AH=32H   Get DPB (Drive Parameter Block)                   ◄wasUndoc►
+2.0+   AX=3300H Query Break-Check Flag
+2.0+   AX=3301H Set Break-check level
+2.0+   AX=3305H Get Boot Drive                                    ◄wasUndoc►
+5.0+   AX=3306H Get DOS Version Info (and HMA use)
+2.0+   AH=34H   Get InDOS Address (DOS Reentrancy Status)         ◄wasUndoc►
+2.0+   AH=35H   Get Interrupt Vector
+2.0+   AH=36H   Get Disk Free Space
+?.?    AX=3700H Query Switchar                                    ◄obsolete►
+?.?    AX=3701H Set Switchar                                      ◄obsolete►
+2.0+   AH=38H   Get/Set Country-dependent Info
+2.0+   AH=39H   Create a New Directory -- MKDIR
+2.0+   AH=3aH   Delete a Directory -- RMDIR
+2.0+   AH=3bH   Set DOS Default Directory -- CHDIR
+2.0+   AH=3cH   Create a File via Handle
+2.0+   AH=3dH   Open a File via Handle
+2.0+   AH=3eH   Close a File Handle
+2.0+   AH=3fH   Read from File via Handle
+2.0+   AH=40H   Write to File via Handle
+2.0+   AH=41H   Delete File
+2.0+   AH=42H   Set File Pointer
+2.0+   AX=4300H Query File Attribute
+2.0+   AX=4301H Set File Attribute
+2.0+   AX=4400H IOCTL Query Device/File Flags
+2.0+   AX=4401H IOCTL Set Device/File Flags
+2.0+   AX=4402H IOCTL Receive Control Data from Char Device
+2.0+   AX=4403H IOCTL Send Control Data to Character Device
+2.0+   AX=4404H IOCTL Receive Control Data from Block Device
+2.0+   AX=4405H IOCTL Send Control Data to Block Device
+2.0+   AX=4406H IOCTL Query Handle Input Status
+2.0+   AX=4407H IOCTL Query Handle Output Status
+3.0+   AX=4408H IOCTL Does Drive Use Removable Media
+3.1+   AX=4409H IOCTL Is Drive Remote
+3.1+   AX=440aH IOCTL Is File/Device Remote
+3.1+   AX=440bH IOCTL Set Sharing Retry Count
+3.3+   AX=440cH 45H IOCTL Set Retry Iteration Count
+3.3+   AX=440cH 4AH IOCTL Select Code Page
+3.3+   AX=440cH 4CH IOCTL Start Code Page Prepare
+3.3+   AX=440cH 4DH IOCTL End Code Page Prepare
+4.0+   AX=440cH 5Fh IOCTL Set Display Mode
+3.3+   AX=440cH 65H IOCTL Query Retry Iteration Count
+3.3+   AX=440cH 6AH IOCTL Query Current Code Page
+3.3+   AX=440cH 6BH IOCTL Query Code Page List
+4.0+   AX=440cH 7Fh IOCTL Query Display Mode
+3.2+   AX=440dH 40H IOCTL Set Device Parameters
+3.2+   AX=440dH 41H IOCTL Write Track on Logical Drive
+3.2+   AX=440dH 42H IOCTL Format Track on Logical Drive
+4.0+   AX=440dH 46H IOCTL Set Media ID
+3.2+   AX=440dH 47H IOCTL Set Access Flag
+3.2+   AX=440dH 60H IOCTL Query Device Parameters
+3.2+   AX=440dH 61H IOCTL Read Track on Logical Drive
+3.2+   AX=440dH 62H IOCTL Verify Track on Logical Drive
+5.0+   AX=440dH 66H IOCTL Query Media ID
+4.0    AX=440dH 67H IOCTL Query Access Flag
+3.2+   AX=440dH 68H IOCTL Sense Media Type
+3.2+   AX=440eH IOCTL Query Logical Drive Map
+3.2+   AX=440fH IOCTL Set Logical Drive Map
+5.0+   AX=4410H IOCTL Query IOCTL Support for Handle
+5.0+   AX=4411H IOCTL Query IOCTL Support for Device
+2.0+   AH=45H   Duplicate a File Handle
+2.0+   AH=46H   Redirect a Handle
+2.0+   AH=47H   Query Default Directory
+2.0+   AH=48H   Allocate Memory / Query Free Memory
+2.0+   AH=49H   Free Allocated Memory Block
+2.0+   AH=4aH   Shrink or Expand a Memory Block
+2.0+   AX=4b00H Execute a Program -- EXEC
+2.0+   AX=4b01H Load Program                                      ◄wasUndoc►
+2.0+   AX=4b03H Load Overlay
+5.0+   AX=4b05H Set Execution State
+2.0+   AH=4cH   Terminate Program
+2.0+   AH=4dH   Get Program Exit Code
+2.0+   AH=4eH   Find 1st Matching File
+2.0+   AH=4fH   Find Next Matching File
+2.0+   AH=50H   Set PSP                                           ◄wasUndoc►
+2.0+   AH=51H   Query Current PSP                                 ◄wasUndoc►
+????   AH=52H   Get DOS Variables                                    ◄undoc►
+????   AH=53H   Convert BPB to DPB                                   ◄undoc►
+2.0+   AH=54H   Get DOS Verify State
+2.0+   AH=56H   Rename/Move a File
+2.0+   AX=5700H Query File Time/Date
+2.0+   AX=5701H Set File Time/Date
+3.0+   AX=5800H Query Memory Allocation Strategy
+3.0+   AX=5801H Set Memory Allocation Strategy
+5.0+   AX=5802H Query Upper-Memory Link State
+5.0+   AX=5803H Set Upper-Memory Link State
+3.0+   AH=59H   Get Extended Error Info
+3.0+   AH=5aH   Create Unique Temporary File
+3.0+   AH=5bH   Create New File
+3.1+   AX=5c00H Lock File Access
+3.1+   AX=5c01H Unlock File Access
+4.0+   AX=5d0aH Set Extended Error
+3.1+   AX=5e00H Query Network Node Name
+3.1+   AX=5e02H Set Network Printer Setup
+3.1+   AX=5e03H Query Network Printer Setup
+3.1+   AX=5f02H Network Query Assign-List Entry
+3.1+   AX=5f03H Make Network Connection
+3.1+   AX=5f04H Delete Network Connection
+????   AH=60H   Query TrueName                                       ◄undoc►
+2.0+   AH=62H   Query Current PSP                                 ◄wasUndoc►
+3.3+   AX=6501H Get Extended Country Information
+3.3+   AX=6504H Get Uppercase Table
+3.3+   AX=6505H Get Filename Character Table
+3.3+   AX=6506H Get Collating Sequence Table
+3.3+   AX=6507H Get Double-Byte Character Set
+3.3+   AX=6520H Upshift Character
+3.3+   AX=6521H Upshift String
+3.3+   AX=6522H Upshift ASCIIZ String
+3.3+   AX=6601H Query Active Code Page
+3.3+   AX=6602H Activate Code Page
+3.3+   AH=67H   Set File Handle Count
+3.3+   AH=68H   Commit File
+4.0+   AH=6cH   Extended Open/Create
+</pre></body>
+</html>
+
