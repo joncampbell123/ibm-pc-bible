@@ -288,9 +288,9 @@ Ver  │ Func   │ Function
 3.3+   AX=6505H Get Filename Character Table
 3.3+   AX=6506H Get Collating Sequence Table
 3.3+   AX=6507H Get Double-Byte Character Set [RBIL says 4.0+]
-3.3+   AX=6520H Upshift Character [RBIL says 4.0+]
-3.3+   AX=6521H Upshift String
-3.3+   AX=6522H Upshift ASCIIZ String
+3.3+   AX=6520H Convert Character [RBIL says 4.0+]
+3.3+   AX=6521H Convert String
+3.3+   AX=6522H Convert ASCIIZ String
 4.0+   AX=6523H Determine if Character Represents Yes/No Response
 4.0+   AX=65A0H Capitalize filename
 3.3+   AX=6601H Query Active Code Page
@@ -324,7 +324,7 @@ Ver  │ Func   │ Function
 7.0+   AX=7160H CL=00H True Name, Canonicalize Path Long Filename (Windows 95)
 7.0+   AX=7160H CL=01H Get Short 8.3 Filename from Long Filename (Windows 95)
 7.0+   AX=7160H CL=02H Get Canonical Long Filename or Path (Windows 95)
-7.0+   AX=716CH Create File with Long Filename (Windows 95)
+7.0+   AX=716CH Extended Open/Create File with Long Filename (Windows 95)
 7.0+   AX=71A0H Get Volume Information with Long Filename (Windows 95)
 7.0+   AX=71A1H Find Close, Terminate Directory Search (Windows 95)
 7.0+   AX=71A2H Long Filename, Find Next Matching File (Windows 95)
@@ -339,6 +339,17 @@ Ver  │ Func   │ Function
 7.0+   AX=7302H Get FAT32 Extended DPB (Windows 95 OSR2)
 7.0+   AX=7303H Get FAT32 Extended Free Disk Space on Drive (Windows 95 OSR2)
 7.0+   AX=7304H Set DPB To Use For Formatting (Windows 95 OSR2)
+
+───────────────────────────────────────────────────────────────────────────
+References:
+
+  Ralph Brown Interrupt List
+    [http://www.ctyme.com/intr/int-21.htm]
+
+  Tech Help Manual INT 21h reference
+    [http://www.techhelpmanual.com/560-int_21h__dos_functions.html]
+
+  Microsoft Development Library July 1995
 </pre></body>
 </html>
 
