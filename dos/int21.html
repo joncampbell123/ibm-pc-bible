@@ -140,8 +140,8 @@ Ver  │ Func   │ Function
 2.0+   AH=4fH   Find Next Matching File
 2.0+   AH=50H   Set PSP
 2.0+   AH=51H   Query Current PSP
-????   AH=52H   Get DOS Variables
-????   AH=53H   Convert BPB to DPB
+2.0+   AH=52H   Get DOS Variables (List of Lists)
+2.0+   AH=53H   Convert BPB to DPB
 2.0+   AH=54H   Get DOS Verify State
 2.0+   AH=56H   Rename/Move a File
 2.0+   AX=5700H Query File Time/Date
@@ -162,7 +162,7 @@ Ver  │ Func   │ Function
 3.1+   AX=5f02H Network Query Assign-List Entry
 3.1+   AX=5f03H Make Network Connection
 3.1+   AX=5f04H Delete Network Connection
-????   AH=60H   Query TrueName
+3.0+   AH=60H   Query TrueName (Canonicalize Filename or Path)
 2.0+   AH=62H   Query Current PSP
 3.3+   AX=6501H Get Extended Country Information
 3.3+   AX=6504H Get Uppercase Table
