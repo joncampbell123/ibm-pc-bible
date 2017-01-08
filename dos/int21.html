@@ -185,7 +185,12 @@ Ver  │ Func   │ Function
 5.0+   AX=5f07H Enable Drive
 5.0+   AX=5f08H Disable Drive
 3.0+   AH=60H   Query TrueName (Canonicalize Filename or Path)
+3.0+   AH=61H   NULL (Reserved for Network Use)
 2.0+   AH=62H   Query Current PSP
+2.25   AX=6300H Get Lead Byte Table Address
+3.2+   AX=6300H Get Double Byte Character Set Lead-Byte Table
+2.25+  AX=6301H Set Korean (Hangeul) Input Mode (v2.25/v3.2+)
+2.25+  AX=6302H Get Korean (Hangeul) Input Mode (v2.25/v3.2+)
 3.3+   AX=6501H Get Extended Country Information
 3.3+   AX=6504H Get Uppercase Table
 3.3+   AX=6505H Get Filename Character Table
