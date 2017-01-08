@@ -3,4 +3,5 @@
 git clean -dfx
 git reset --hard
 git commit -a
+true
 

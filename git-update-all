@@ -5,4 +5,5 @@ git reset --hard
 git commit -a
 git push
 git pull
+true
 
