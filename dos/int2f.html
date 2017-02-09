@@ -110,6 +110,15 @@ Windows 95   AX=168FH DH=00H Close-Awareness: Enable/Disable Close Command
 Windows 95   AX=168FH DH=01H Close-Awareness: Query Close
 Windows 95   AX=168FH DH=02H Close-Awareness: Acknowledge Close
 Windows 95   AX=168FH DH=03H Close-Awareness: Cancel Close
+WINOLDAP     AX=1700H   Identify WINOLDAP Version
+WINOLDAP     AX=1701H   Open Clipboard
+WINOLDAP     AX=1702H   Empty Clipboard
+WINOLDAP     AX=1703H   Set Clipboard Data
+WINOLDAP     AX=1704H   Get Clipboard Data Size
+WINOLDAP     AX=1705H   Get Clipboard Data
+WINOLDAP     AX=1708H   Close Clipboard
+WINOLDAP     AX=1709H   Compact Clipboard
+WINOLDAP     AX=170AH   Get (GDI) Device Capabilities
 Windows      AX=4000H   Enable VM-Assisted Save/Restore (VDD)
 Windows      AX=4001H   Notify Background Switch (callout)
 Windows      AX=4002H   Notify Foreground Switch (callout)
@@ -147,6 +156,10 @@ Windows 3.0                 Microsoft Windows 3.0
 Windows 3.1                 Microsoft Windows 3.1
 
 Windows 95                  Microsoft Windows 95
+
+WINOLDAP                    Microsoft Windows WINOLDAP extension to support
+                            "old" (character mode) application access to DDE,
+                            menus, and the clipboard.
 
 ───────────────────────────────────────────────────────────────────────────────
 References:
