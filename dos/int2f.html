@@ -86,6 +86,10 @@ Windows      AX=1606H   Windows Termination Notification (callout)
 Windows      AX=1607H   Windows Device Callout
 Windows      AX=1608H   Windows Init Complete Notification (callout)
 Windows      AX=1609H   Windows Begin Exit (callout)
+Windows 3.1  AX=160AH   Identify Windows Version and Type (Windows 3.1+)
+Windows 3.1  AX=160BH   Identify TSRs (callout) (Windows 3.1+)
+Windows 3.1  AX=160CH   Detect ROMs (Windows 3.1+ ROM)
+SAVE32.COM   AX=1615H   SAVE32.COM Installation Check
 Windows      AX=1680H   Release Current VM Time-Slice
 Windows      AX=1681H   Begin Critical Section (prevent task-switch)
 Windows      AX=1682H   End Critical Section
@@ -114,9 +118,14 @@ Netredir                    MS-DOS network redirector
 
 PRINT.COM                   MS-DOS print spooler (PRINT.COM)
 
+SAVE32.COM                  Windows 95 utility to preserve 32-bit registers
+                            across invocations of hardware interrupt handlers
+
 SHARE.EXE                   MS-DOS file locking/shared file access
 
 Windows                     Microsoft Windows
+
+Windows 3.1                 Microsoft Windows 3.1
 
 Win/386 2.x                 Microsoft Windows 2.0 / 386
 
