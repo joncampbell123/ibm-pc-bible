@@ -277,8 +277,11 @@ Ver  │ Func   │ Function
 2.0+   AH=62H   Query Current PSP
 2.25   AX=6300H Get Lead Byte Table Address
 3.2+   AX=6300H Get Double Byte Character Set Lead-Byte Table
-2.25+  AX=6301H Set Korean (Hangeul) Input Mode (v2.25/v3.2+)
-2.25+  AX=6302H Get Korean (Hangeul) Input Mode (v2.25/v3.2+)
+2.25   AX=6301H DL=00H Clear Interim Console Flag
+2.25   AX=6301H DL=01H Set Interim Console Flag
+3.2+   AX=6301H Set Korean (Hangeul) Input Mode
+2.25   AX=6302H Get Interim Console Flag
+3.2+   AX=6302H Get Korean (Hangeul) Input Mode
 3.2+   AH=64H   Set Device Driver Lookahead Flag
 7.1+   AX=6500H Set General Internationalization Info (Windows 95 OSR2)
 3.3+   AX=6501H Get Extended Country Information
