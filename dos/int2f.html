@@ -15,12 +15,17 @@ other utilities, as well as Windows.
 ═══════════════════════════════════════════════════════════════════════════════
 Program      │ Func   │ Function
 ─────────────┴────────┴────────────────────────────────────────────────────────
-PRINT.COM    AX=0100H   Get Print Spooler Installed State
-PRINT.COM    AX=0101H   Submit File to be Printed
-PRINT.COM    AX=0102H   Remove File from Print Queue
-PRINT.COM    AX=0103H   Cancel All Files in Queue
-PRINT.COM    AX=0104H   Hold Print Jobs for Status Read
-PRINT.COM    AX=0105H   Release Hold
+PRINT.COM    AH=00H     Submit file for Printing (MS-DOS 2.x PRINT.COM only)
+PRINT.COM    AX=0080H   Give PRINT.COM a time slice (MS-DOS 3.1+)
+PRINT.COM    AX=0100H   Get Print Spooler Installed State (MS-DOS 3.0+)
+PRINT.COM    AH=01H     Remove file from Print Queue (MS-DOS 2.x PRINT.COM only)
+PRINT.COM    AX=0101H   Submit File to be Printed (MS-DOS 3.0+)
+PRINT.COM    AX=0102H   Remove File from Print Queue (MS-DOS 3.0+)
+PRINT.COM    AX=0103H   Cancel All Files in Queue (MS-DOS 3.0+)
+PRINT.COM    AX=0104H   Hold Print Jobs for Status Read (MS-DOS 3.0+)
+PRINT.COM    AX=0105H   Release Hold (MS-DOS 3.0+)
+PRINT.COM    AX=0106H   Get Printer Device (MS-DOS 3.3+)
+ASSIGN.COM   AX=0600H   Get ASSIGN utility installed state
 Windows      AX=1600H   Get Windows Installed State
 Win/386 2.x  AX=1602H   Get Windows Entry Point (Obsolete past 2.x)
 Windows      AX=1605H   Windows Initialization Notification (callout)
@@ -46,6 +51,9 @@ Windows      AX=4007H   Disable VM-Assisted Save/Restore (VDD)
 
 ───────────────────────────────────────────────────────────────────────────────
 Glossary:
+
+ASSIGN.COM                  MS-DOS ASSIGN utility (to redirect a drive letter
+                            to another drive)
 
 PRINT.COM                   MS-DOS print spooler (PRINT.COM)
 
