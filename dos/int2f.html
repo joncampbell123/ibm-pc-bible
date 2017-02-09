@@ -96,7 +96,10 @@ Windows      AX=1682H   End Critical Section
 Windows      AX=1683H   Get Current Virtual Machine ID
 Windows      AX=1684H   Get Device Entry Point Address
 Windows      AX=1685H   Switch VMs and CallBack
-Windows      AX=1686H   Detect Interrupt 31h Services
+DPMI         AX=1686H   Detect Interrupt 31h Services
+DPMI         AX=1687H   DPMI Installation Check
+Windows 3.0  AX=1689H   Kernel Idle Call (callout)
+DPMI         AX=168AH   Get Vendor-Specific API Entry Point
 Windows      AX=4000H   Enable VM-Assisted Save/Restore (VDD)
 Windows      AX=4001H   Notify Background Switch (callout)
 Windows      AX=4002H   Notify Foreground Switch (callout)
@@ -112,6 +115,8 @@ Glossary:
 ASSIGN.COM                  MS-DOS ASSIGN utility (to redirect a drive letter
                             to another drive)
 
+DPMI                        DOS Protected Mode Interface
+
 MSCDEX.EXE                  Microsoft CD-ROM extensions for MS-DOS
 
 Netredir                    MS-DOS network redirector
@@ -124,6 +129,8 @@ SAVE32.COM                  Windows 95 utility to preserve 32-bit registers
 SHARE.EXE                   MS-DOS file locking/shared file access
 
 Windows                     Microsoft Windows
+
+Windows 3.0                 Microsoft Windows 3.0
 
 Windows 3.1                 Microsoft Windows 3.1
 
