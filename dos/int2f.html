@@ -15,6 +15,12 @@ other utilities, as well as Windows.
 ═══════════════════════════════════════════════════════════════════════════════
 Program      │ Func   │ Function
 ─────────────┴────────┴────────────────────────────────────────────────────────
+PRINT.COM    AX=0100H   Get Print Spooler Installed State
+PRINT.COM    AX=0101H   Submit File to be Printed
+PRINT.COM    AX=0102H   Remove File from Print Queue
+PRINT.COM    AX=0103H   Cancel All Files in Queue
+PRINT.COM    AX=0104H   Hold Print Jobs for Status Read
+PRINT.COM    AX=0105H   Release Hold
 Windows      AX=1600H   Get Windows Installed State
 Win/386 2.x  AX=1602H   Get Windows Entry Point (Obsolete past 2.x)
 Windows      AX=1605H   Windows Initialization Notification (callout)
@@ -37,6 +43,15 @@ Windows      AX=4004H   Exit Critical Section (callout)
 Windows      AX=4005H   Save Video Register State (callout)
 Windows      AX=4006H   Restore Video Register State (callout)
 Windows      AX=4007H   Disable VM-Assisted Save/Restore (VDD)
+
+───────────────────────────────────────────────────────────────────────────────
+Glossary:
+
+PRINT.COM                   MS-DOS print spooler (PRINT.COM)
+
+Windows                     Microsoft Windows
+
+Win/386 2.x                 Microsoft Windows 2.0 / 386
 
 ───────────────────────────────────────────────────────────────────────────────
 References:
