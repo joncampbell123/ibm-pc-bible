@@ -102,6 +102,14 @@ Windows 3.0  AX=1689H   Kernel Idle Call (callout)
 DPMI         AX=168AH   Get Vendor-Specific API Entry Point
 Windows 3.1  AX=168BH   Set Focus to Specified Virtual Machine
 Windows 3.1  AX=168CH   Restart Command
+Windows 95   AX=168EH DX=0000H Set Application Title
+Windows 95   AX=168EH DX=0001H Set Virtual Machine Title
+Windows 95   AX=168EH DX=0002H Get Application Title
+Windows 95   AX=168EH DX=0003H Get Virtual Machine Title
+Windows 95   AX=168FH DH=00H Close-Awareness: Enable/Disable Close Command
+Windows 95   AX=168FH DH=01H Close-Awareness: Query Close
+Windows 95   AX=168FH DH=02H Close-Awareness: Acknowledge Close
+Windows 95   AX=168FH DH=03H Close-Awareness: Cancel Close
 Windows      AX=4000H   Enable VM-Assisted Save/Restore (VDD)
 Windows      AX=4001H   Notify Background Switch (callout)
 Windows      AX=4002H   Notify Foreground Switch (callout)
@@ -132,11 +140,13 @@ SHARE.EXE                   MS-DOS file locking/shared file access
 
 Windows                     Microsoft Windows
 
+Win/386 2.x                 Microsoft Windows 2.0 / 386
+
 Windows 3.0                 Microsoft Windows 3.0
 
 Windows 3.1                 Microsoft Windows 3.1
 
-Win/386 2.x                 Microsoft Windows 2.0 / 386
+Windows 95                  Microsoft Windows 95
 
 ───────────────────────────────────────────────────────────────────────────────
 References:
