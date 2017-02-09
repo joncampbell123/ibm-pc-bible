@@ -28,6 +28,8 @@ PRINT.COM    AX=0106H   Get Printer Device (MS-DOS 3.3+)
 ASSIGN.COM   AX=0600H   Get ASSIGN utility installed state (MS-DOS 3.0+)
 ASSIGN.COM   AX=0601H   Get ASSIGN Drive Assignment Table (MS-DOS 3.0+)
 SHARE.EXE    AX=1000H   SHARE.EXE installation check
+Netredir     AX=1100H   Get Network Installed State (Network redirector)
+MSCDEX.EXE   AX=1100H   MSCDEX.EXE Installation Check (SS:SP=0xDADA)
 Windows      AX=1600H   Get Windows Installed State
 Win/386 2.x  AX=1602H   Get Windows Entry Point (Obsolete past 2.x)
 Windows      AX=1605H   Windows Initialization Notification (callout)
@@ -56,6 +58,10 @@ Glossary:
 
 ASSIGN.COM                  MS-DOS ASSIGN utility (to redirect a drive letter
                             to another drive)
+
+MSCDEX.EXE                  Microsoft CD-ROM extensions for MS-DOS
+
+Netredir                    MS-DOS network redirector
 
 PRINT.COM                   MS-DOS print spooler (PRINT.COM)
 
