@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+All INT 2Fh functions, ordered by function call number (value of AH on entry).
+Some functions have a subfunction (AL). If any other registers control the
+function on entry, they are listed as well.
+
+INT 2Fh carries many functions, from many parts of the system and from many
+other utilities, as well as Windows.
+
+═══════════════════════════════════════════════════════════════════════════════
+Program      │ Func   │ Function
+─────────────┴────────┴────────────────────────────────────────────────────────
+Windows      AX=1600H   Get Windows Installed State
+Win/386 2.x  AX=1602H   Get Windows Entry Point (Obsolete past 2.x)
+Windows      AX=1605H   Windows Initialization Notification (callout)
+Windows      AX=1606H   Windows Termination Notification (callout)
+Windows      AX=1607H   Windows Device Callout
+Windows      AX=1608H   Windows Init Complete Notification (callout)
+Windows      AX=1609H   Windows Begin Exit (callout)
+Windows      AX=1680H   Release Current VM Time-Slice
+Windows      AX=1681H   Begin Critical Section (prevent task-switch)
+Windows      AX=1682H   End Critical Section
+Windows      AX=1683H   Get Current Virtual Machine ID
+Windows      AX=1684H   Get Device Entry Point Address
+Windows      AX=1685H   Switch VMs and CallBack
+Windows      AX=1686H   Detect Interrupt 31h Services
+Windows      AX=4000H   Enable VM-Assisted Save/Restore (VDD)
+Windows      AX=4001H   Notify Background Switch (callout)
+Windows      AX=4002H   Notify Foreground Switch (callout)
+Windows      AX=4003H   Enter Critical Section (callout)
+Windows      AX=4004H   Exit Critical Section (callout)
+Windows      AX=4005H   Save Video Register State (callout)
+Windows      AX=4006H   Restore Video Register State (callout)
+Windows      AX=4007H   Disable VM-Assisted Save/Restore (VDD)
+
+───────────────────────────────────────────────────────────────────────────────
+References:
+
+  Ralph Brown Interrupt List
+    [http://www.ctyme.com/intr/int-21.htm]
+
+  Tech Help Manual INT 21h reference
+    [http://www.techhelpmanual.com/560-int_21h__dos_functions.html]
+
+  Microsoft Development Library July 1995
+
+  Microsoft Visual Studio 4.0 help documentation
+</pre></body>
+</html>
+
