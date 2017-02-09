@@ -130,6 +130,13 @@ Windows      AX=4007H   Disable VM-Assisted Save/Restore (VDD)
 Windows 3.0  AX=4680H   Windows 3.0 installation check (real/standard only)
 DOSKEY       AX=4800H   DOSKEY Installation Check (DOS 5.0+)
 DOSKEY       AX=4810H   DOSKEY Read Input Line from Console (DOS 5.0+)
+MS-DOS 5.0   AX=4A00H CX=0000H Floppy-Disk Logical Drive Change Notification (DOS 5.0+)
+MS-DOS 5.0   AX=4A01H   Query Free HMA Space (DOS 5.0+)
+MS-DOS 5.0   AX=4A02H   Allocate HMA Space (DOS 5.0+)
+Windows 95   AX=4A03H DL=00H Allocate HMA Memory Block
+Windows 95   AX=4A03H DL=01H Resize HMA Memory Block
+Windows 95   AX=4A03H DL=02H Free HMA Memory Block [rbil uncertain]
+Windows 95   AX=4A04H   Get Start of HMA Memory Chain
 
 ───────────────────────────────────────────────────────────────────────────────
 Glossary:
