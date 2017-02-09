@@ -15,23 +15,23 @@ The minimum DOS version required is included for reference.
 Ver  │ Func   │ Function
 ─────┴────────┴────────────────────────────────────────────────────────────────
 1.0+   AH=00H   Terminate a Program
-1.0+   AH=01H   Keyboard Input
-1.0+   AH=02H   Display Output
+1.0+   AH=01H   Character Input with echo
+1.0+   AH=02H   Character Output
 1.0+   AH=03H   Auxiliary Input
 1.0+   AH=04H   Auxiliary Output
 1.0+   AH=05H   Printer Output
-1.0+   AH=06H   Console I/O
-1.0+   AH=07H   No Echo Unfiltered Console Input
-1.0+   AH=08H   No Echo Console Input
+1.0+   AH=06H   Direct Console I/O
+1.0+   AH=07H   Unfiltered Character Input without Echo
+1.0+   AH=08H   Console Input without Echo
 1.0+   AH=09H   Display String
-1.0+   AH=0aH   Buffered String Input
+1.0+   AH=0aH   Buffered Line Input
 1.0+   AH=0bH   Check Input Status
-1.0+   AH=0cH   Clear &amp; Input
+1.0+   AH=0cH   Flush Input Buffer and then Input
 1.0+   AH=0dH   Reset Disk
 1.0+   AH=0eH   Select DOS Default Disk
 1.0+   AH=0fH   Open File via FCB
 1.0+   AH=10H   Close File via FCB
-1.0+   AH=11H   Find 1st Matching File via FCB
+1.0+   AH=11H   Find First Matching File via FCB
 1.0+   AH=12H   Find Next Matching File via FCB
 1.0+   AH=13H   Delete File via FCB
 1.0+   AH=14H   Read Sequential File via FCB
