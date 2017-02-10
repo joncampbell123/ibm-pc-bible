@@ -149,12 +149,28 @@ SMARTDRV.EXE AX=4A10H BX=0007H Get Device Driver for Drive (4.00+)
 SMARTDRV.EXE AX=4A10H BX=0008H Get/Set Flush Before Prompt, CD-ROM Support (4.20+)
 SMARTDRV.EXE AX=4A10H BX=000AH Get Element Status Table (4.00+)
 SMARTDRV.EXE AX=4A10H BX=1234H Signal Serious Error (4.00+)
+DBLSPACE.BIN AX=4A11H BX=0000H Installation Check
+DBLSPACE.BIN AX=4A11H BX=0001H Get Drive Mapping
+DBLSPACE.BIN AX=4A11H BX=0002H Swap Drive Letters of CVF and Host Drive
+DBLSPACE.BIN AX=4A11H BX=0003H Get Device Driver Entry Points
+DBLSPACE.BIN AX=4A11H BX=0004H Set Device Driver Entry Points
+DBLSPACE.BIN AX=4A11H BX=0005H Active Drive, Mount Compressed Drive
+DBLSPACE.BIN AX=4A11H BX=0006H Deactivate Drive, Unmount Compressed Drive
+DBLSPACE.BIN AX=4A11H BX=0007H Get Space Available on Compressed Drive
+DBLSPACE.BIN AX=4A11H BX=0008H Get Size of Fragment Heap
+DBLSPACE.BIN AX=4A11H BX=0009H Determine Number of DISK_UNIT Structs
+DBLSPACE.BIN AX=4A11H BX=000AH Set Automount Drives (v6.2+)
+DBLSPACE.BIN AX=4A11H BX=000BH Get Automount Drives (v6.2+)
+DBLSPACE.BIN AX=4A11H BX=FFFEH Relocate DBLSPACE.BIN
+DBLSPACE.BIN AX=4A11H BX=FFFFH Get Relocation Size
 
 ───────────────────────────────────────────────────────────────────────────────
 Glossary:
 
 ASSIGN.COM                  MS-DOS ASSIGN utility (to redirect a drive letter
                             to another drive)
+
+DBLSPACE.BIN                Microsoft DoubleSpace
 
 DPMI                        DOS Protected Mode Interface
 
