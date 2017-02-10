@@ -124,6 +124,21 @@ MS-DOS 3.0   AX=1224H   Sharing Retry Delay (DOS 3.x+ internal)
 MS-DOS 3.0   AX=1225H   Get Length of ASCIIZ String (DOS 3.x+ internal)
 MS-DOS 3.3   AX=1226H   Open File (DOS 3.3+ internal call only)
 MS-DOS 3.3   AX=1227H   Close File (DOS 3.3+ internal call only)
+MS-DOS 3.3   AX=1228H BP=4200H Move File Pointer (SEEK_SET) (DOS 3.3+ internal call only)
+MS-DOS 3.3   AX=1228H BP=4201H Move File Pointer (SEEK_CUR) (DOS 3.3+ internal call only)
+MS-DOS 3.3   AX=1228H BP=4202H Move File Pointer (SEEK_END) (DOS 3.3+ internal call only)
+MS-DOS 3.3   AX=1229H   Read From File (DOS 3.3+ internal call only)
+MS-DOS 3.3   AX=122AH   Set FASTOPEN Entry Point (DOS 3.3+ internal)
+MS-DOS 3.3   AX=122BH BP=44xxH IOCTL (DOS 3.3+ internal call only)
+MS-DOS 3.3   AX=122CH   Get Device Chain (DOS 3.3+ internal call only)
+MS-DOS 3.3   AX=122DH   Get Extended Error Code (DOS 3.3+ internal)
+MS-DOS 4.0   AX=122EH DL=00H Get Standard DOS Error Table (DOS 4.0+ internal)
+MS-DOS 4.0   AX=122EH DL=01H Set Standard DOS Error Table (DOS 4.0+ internal)
+MS-DOS 4.0   AX=122EH DL=02H Get Parameter Error Table (DOS 4.0+ internal)
+MS-DOS 4.0   AX=122EH DL=03H Set Parameter Error Table (DOS 4.0+ internal)
+MS-DOS 4.0   AX=122EH DL=04H Get Critical/SHARE Error Table (DOS 4.0+ internal)
+MS-DOS 4.0   AX=122EH DL=05H Set Critical/SHARE Error Table (DOS 4.0+ internal)
+MS-DOS 4.0   AX=122EH DL=08H Get Error Message Retriever (DOS 4.0+ internal)
 Windows      AX=1600H   Get Windows Installed State
 Win/386 2.x  AX=1602H   Get Windows Entry Point (Obsolete past 2.x)
 Windows      AX=1603H   Get Instance Data (Windows/386)
@@ -229,6 +244,8 @@ DRIVER.SYS                  DRIVER.SYS in MS-DOS ??, integrated into MS-DOS 3.2+
 MS-DOS 3.0                  Microsoft MS-DOS 3.0
 
 MS-DOS 3.3                  Microsoft MS-DOS 3.3
+
+MS-DOS 4.0                  Microsoft MS-DOS 4.0
 
 MS-DOS 5.0                  Microsoft MS-DOS 5.0
 
