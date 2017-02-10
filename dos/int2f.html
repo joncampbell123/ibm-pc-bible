@@ -137,6 +137,18 @@ Windows 95   AX=4A03H DL=00H Allocate HMA Memory Block
 Windows 95   AX=4A03H DL=01H Resize HMA Memory Block
 Windows 95   AX=4A03H DL=02H Free HMA Memory Block [rbil uncertain]
 Windows 95   AX=4A04H   Get Start of HMA Memory Chain
+NWCACHE.EXE  AX=4A10H BX=0000H CX=0EDCH Installation Check and Statistics
+SMARTDRV.EXE AX=4A10H BX=0000H CX=EBABH Installation Check and (get) Hit Ratios (4.00+)
+SMARTDRV.EXE AX=4A10H BX=0001H Flush Buffers (Commit Cache) (4.00+)
+SMARTDRV.EXE AX=4A10H BX=0002H Reset Cache (4.00+)
+SMARTDRV.EXE AX=4A10H BX=0003H Status (4.00+)
+SMARTDRV.EXE AX=4A10H BX=0004H Get Cache Size (4.00+)
+SMARTDRV.EXE AX=4A10H BX=0005H Get Double-Buffer Status (4.00+)
+SMARTDRV.EXE AX=4A10H BX=0006H Check if Drive Cacheable (4.00+)
+SMARTDRV.EXE AX=4A10H BX=0007H Get Device Driver for Drive (4.00+)
+SMARTDRV.EXE AX=4A10H BX=0008H Get/Set Flush Before Prompt, CD-ROM Support (4.20+)
+SMARTDRV.EXE AX=4A10H BX=000AH Get Element Status Table (4.00+)
+SMARTDRV.EXE AX=4A10H BX=1234H Signal Serious Error (4.00+)
 
 ───────────────────────────────────────────────────────────────────────────────
 Glossary:
@@ -150,12 +162,16 @@ MSCDEX.EXE                  Microsoft CD-ROM extensions for MS-DOS
 
 Netredir                    MS-DOS network redirector
 
+NWCACHE.EXE                 Novell NWCACHE disk cache
+
 PRINT.COM                   MS-DOS print spooler (PRINT.COM)
 
 SAVE32.COM                  Windows 95 utility to preserve 32-bit registers
                             across invocations of hardware interrupt handlers
 
 SHARE.EXE                   MS-DOS file locking/shared file access
+
+SMARTDRV.EXE                SmartDrive disk caching for MS-DOS
 
 Windows                     Microsoft Windows
 
