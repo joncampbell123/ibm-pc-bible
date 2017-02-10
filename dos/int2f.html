@@ -149,6 +149,7 @@ NLSFUNC.COM  AX=1401H   Change Code Page
 NLSFUNC.COM  AX=1402H   Get Extended Country Info
 NLSFUNC.COM  AX=1403H   Set Code Page
 NLSFUNC.COM  AX=1404H   Get Country Info
+GRAPHICS.COM AX=1500H   Installation Check (DOS 4.0 only)
 Windows      AX=1600H   Get Windows Installed State
 Win/386 2.x  AX=1602H   Get Windows Entry Point (Obsolete past 2.x)
 Windows      AX=1603H   Get Instance Data (Windows/386)
@@ -238,6 +239,7 @@ Windows 95   AX=4A16H   Open Boot Log
 Windows 95   AX=4A17H   Write to Boot Log
 Windows 95   AX=4A18H   Close Boot Log
 Windows 95   AX=4A33H   Check MS-DOS Version 7
+GRAPHICS.COM AX=AC00H   Installation Check (DOS 4.01+)
 
 ───────────────────────────────────────────────────────────────────────────────
 Glossary:
@@ -250,6 +252,8 @@ DBLSPACE.BIN                Microsoft DoubleSpace
 DPMI                        DOS Protected Mode Interface
 
 DRIVER.SYS                  DRIVER.SYS in MS-DOS ??, integrated into MS-DOS 3.2+
+
+GRAPHICS.COM                MS-DOS utility to print the screen
 
 MS-DOS 3.0                  Microsoft MS-DOS 3.0
 
