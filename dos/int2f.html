@@ -150,6 +150,24 @@ NLSFUNC.COM  AX=1402H   Get Extended Country Info
 NLSFUNC.COM  AX=1403H   Set Code Page
 NLSFUNC.COM  AX=1404H   Get Country Info
 GRAPHICS.COM AX=1500H   Installation Check (DOS 4.0 only)
+MSCDEX.EXE   AX=1500H BX=0000H Installation Check
+MSCDEX.EXE   AX=1501H   Get Drive Device List
+MSCDEX.EXE   AX=1502H   Get Copyright File Name
+MSCDEX.EXE   AX=1503H   Get Abstract File Name
+MSCDEX.EXE   AX=1504H   Get Bibliographic File Name
+MSCDEX.EXE   AX=1505H   Get Volume Table of Contents
+MSCDEX.EXE   AX=1506H   Enable Debugging (debug builds only)
+MSCDEX.EXE   AX=1507H   Disable Debugging (debug builds only)
+MSCDEX.EXE   AX=1508H   Absolute Disk Read
+MSCDEX.EXE   AX=1509H   Absolute Disk Write
+MSCDEX.EXE   AX=150AH   Reserved
+MSCDEX.EXE   AX=150BH   Drive Check (2.00+)
+MSCDEX.EXE   AX=150CH BX=0000H Get MSCDEX.EXE version (2.00+)
+MSCDEX.EXE   AX=150DH   Get CD-ROM Drive Letters (2.00+)
+MSCDEX.EXE   AX=150EH BX=0000H Get Volume Descriptor Preference (2.00+)
+MSCDEX.EXE   AX=150EH BX=0001H Set Volume Descriptor Preference (2.00+)
+MSCDEX.EXE   AX=150FH   Get Directory Entry (2.00+)
+MSCDEX.EXE   AX=1510H   Send Device Driver Request (2.10+)
 Windows      AX=1600H   Get Windows Installed State
 Win/386 2.x  AX=1602H   Get Windows Entry Point (Obsolete past 2.x)
 Windows      AX=1603H   Get Instance Data (Windows/386)
