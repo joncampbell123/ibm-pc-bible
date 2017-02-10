@@ -29,6 +29,10 @@ MS-DOS 3.0   AX=0500H   Critical Error Handler: Installation Check (MS-DOS 3.0+)
 MS-DOS 3.0   AH=05H     Critical Error Handler: Expand Error into String (MS-DOS 3.0+)
 ASSIGN.COM   AX=0600H   Get ASSIGN utility installed state (MS-DOS 3.0+)
 ASSIGN.COM   AX=0601H   Get ASSIGN Drive Assignment Table (MS-DOS 3.0+)
+DRIVER.SYS   AX=0800H   DRIVER.SYS Installation Check
+DRIVER.SYS   AX=0801H   DRIVER.SYS Add New Block Device
+DRIVER.SYS   AX=0802H   DRIVER.SYS Execute Device Driver Request
+DRIVER.SYS   AX=0803H   DRIVER.SYS Get Drive Data Table List (MS-DOS 4.0+)
 SHARE.EXE    AX=1000H   SHARE.EXE installation check
 Netredir     AX=1100H   Get Network Installed State (Network redirector)
 MSCDEX.EXE   AX=1100H   MSCDEX.EXE Installation Check (SS:SP=0xDADA)
@@ -179,6 +183,8 @@ ASSIGN.COM                  MS-DOS ASSIGN utility (to redirect a drive letter
 DBLSPACE.BIN                Microsoft DoubleSpace
 
 DPMI                        DOS Protected Mode Interface
+
+DRIVER.SYS                  DRIVER.SYS in MS-DOS ??, integrated into MS-DOS 3.2+
 
 MS-DOS 3.0                  Microsoft MS-DOS 3.0
 
