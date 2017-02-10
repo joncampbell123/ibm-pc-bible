@@ -237,6 +237,7 @@ Windows 95   AX=4A03H DL=00H Allocate HMA Memory Block
 Windows 95   AX=4A03H DL=01H Resize HMA Memory Block
 Windows 95   AX=4A03H DL=02H Free HMA Memory Block [rbil uncertain]
 Windows 95   AX=4A04H   Get Start of HMA Memory Chain
+EMM386.EXE   AX=4A15H BX=0000H Install I/O Virtualization Handler (4.46+)
 NWCACHE.EXE  AX=4A10H BX=0000H CX=0EDCH Installation Check and Statistics
 SMARTDRV.EXE AX=4A10H BX=0000H CX=EBABH Installation Check and (get) Hit Ratios (4.00+)
 SMARTDRV.EXE AX=4A10H BX=0001H Flush Buffers (Commit Cache) (4.00+)
@@ -283,6 +284,8 @@ DBLSPACE.BIN                Microsoft DoubleSpace
 DPMI                        DOS Protected Mode Interface
 
 DRIVER.SYS                  DRIVER.SYS in MS-DOS ??, integrated into MS-DOS 3.2+
+
+EMM386.EXE                  MS-DOS Expanded Memory Manager (EMS)
 
 GRAPHICS.COM                MS-DOS utility to print the screen
 
