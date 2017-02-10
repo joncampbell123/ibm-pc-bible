@@ -209,6 +209,10 @@ WINOLDAP     AX=1705H   Get Clipboard Data
 WINOLDAP     AX=1708H   Close Clipboard
 WINOLDAP     AX=1709H   Compact Clipboard
 WINOLDAP     AX=170AH   Get (GDI) Device Capabilities
+ANSI.SYS     AX=1A00H   Get ANSI.SYS Installed State (DOS 4.0+)
+ANSI.SYS     AX=1A01H CL=5FH Set Display Information (DOS 4.0+ ANSI.SYS internal)
+ANSI.SYS     AX=1A01H CL=7FH Get Display Information (DOS 4.0+ ANSI.SYS internal)
+ANSI.SYS     AX=1A02H   Miscellaneous Requests (DOS 4.0+ ANSI.SYS internal)
 Windows      AX=4000H   Enable VM-Assisted Save/Restore (VDD)
 Windows      AX=4001H   Notify Background Switch (callout)
 Windows      AX=4002H   Notify Foreground Switch (callout)
@@ -261,6 +265,9 @@ GRAPHICS.COM AX=AC00H   Installation Check (DOS 4.01+)
 
 ───────────────────────────────────────────────────────────────────────────────
 Glossary:
+
+ANSI.SYS                    MS-DOS driver to interpret ANSI terminal codes
+                            and render them to the screen.
 
 ASSIGN.COM                  MS-DOS ASSIGN utility (to redirect a drive letter
                             to another drive)
