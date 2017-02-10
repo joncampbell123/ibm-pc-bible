@@ -179,6 +179,7 @@ Windows      AX=1609H   Windows Begin Exit (callout)
 Windows 3.1  AX=160AH   Identify Windows Version and Type (Windows 3.1+)
 Windows 3.1  AX=160BH   Identify TSRs (callout) (Windows 3.1+)
 Windows 3.1  AX=160CH   Detect ROMs (Windows 3.1+ ROM)
+HIMEM.SYS    AX=1610H   Installation Check (1.x only)
 SAVE32.COM   AX=1615H   SAVE32.COM Installation Check
 Windows      AX=1680H   Release Current VM Time-Slice
 Windows      AX=1681H   Begin Critical Section (prevent task-switch)
@@ -221,6 +222,11 @@ Windows      AX=4004H   Exit Critical Section (callout)
 Windows      AX=4005H   Save Video Register State (callout)
 Windows      AX=4006H   Restore Video Register State (callout)
 Windows      AX=4007H   Disable VM-Assisted Save/Restore (VDD)
+HIMEM.SYS    AX=4300H   XMS Installation Check (2.0+)
+HIMEM.SYS    AX=4308H   Get A20 Handler Number (2.77+)
+HIMEM.SYS    AX=4309H   Get XMS Handle Table (3.09+)
+HIMEM.SYS    AX=4310H   Get Driver Address (2.0+)
+HIMEM.SYS    AX=4330H   Get External A20 Handler (2.77+)
 Windows 3.0  AX=4680H   Windows 3.0 installation check (real/standard only)
 DOSKEY       AX=4800H   DOSKEY Installation Check (DOS 5.0+)
 DOSKEY       AX=4810H   DOSKEY Read Input Line from Console (DOS 5.0+)
@@ -279,6 +285,8 @@ DPMI                        DOS Protected Mode Interface
 DRIVER.SYS                  DRIVER.SYS in MS-DOS ??, integrated into MS-DOS 3.2+
 
 GRAPHICS.COM                MS-DOS utility to print the screen
+
+HIMEM.SYS                   MS-DOS Extended Memory Manager (XMS)
 
 MS-DOS 3.0                  Microsoft MS-DOS 3.0
 
