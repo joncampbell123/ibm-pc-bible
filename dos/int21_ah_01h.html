@@ -30,6 +30,19 @@ Notes:
 
     CTRL+Z is not interpreted, and does not cause EOF if input is redirected.
 
+    If standard input is the keyboard, then upon reading a carriage return
+    (0DH), this function sends the standard output device a carriage return,
+    but NOT a linefeed, in order to reposition the cursor to the beginning of
+    the line.
+
+    If the input read from the keyboard is an extended key code (such as the
+    function keys or numeric keypad), then this function will return AL=00H
+    and the next byte read will contain the second byte of the extended key
+    code.
+
+    Extended key codes returned by this function are the same BIOS scan codes
+    returned in AH by INT 16h function AH=00H.
+
 See also:
     INT 21H AH=06H Direct Console Output
     INT 21H AH=07H Direct Character Input, Without Echo
