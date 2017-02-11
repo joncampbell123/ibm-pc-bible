@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+All INT 31h functions, ordered by function call number (value of AX on entry).
+
+INT 31h is the protected-mode entry point for the DOS Protected Mode Interface.
+
+═══════════════════════════════════════════════════════════════════════════════
+Ver  │ Func   │ Function
+─────┴────────┴────────────────────────────────────────────────────────────────
+0.9+  AX=0000H  Allocate LDT Descriptors
+0.9+  AX=0001H  Free LDT Descriptor
+0.9+  AX=0002H  Segment to Descriptor
+0.9+  AX=0003H  Get Next Selector Increment Value
+0.9+  AX=0004H  Lock Selector ("Reserved" in later versions of the spec)
+0.9+  AX=0005H  Unlock Selector ("Reserved" in later versions of the spec)
+0.9+  AX=0006H  Get Segment Base Address
+0.9+  AX=0007H  Set Segment Base Address
+0.9+  AX=0008H  Set Segment Limit
+0.9+  AX=0009H  Set Descriptor Access Rights
+0.9+  AX=000AH  Create Alias Descriptor
+0.9+  AX=000BH  Get Descriptor
+0.9+  AX=000CH  Set Descriptor
+0.9+  AX=000DH  Allocate Specific LDT Descriptor
+0.9+  AX=000EH  Get Multiple Descriptors
+0.9+  AX=000FH  Set Multiple Descriptors
+0.9+  AX=0100H  Allocate DOS Memory Block
+0.9+  AX=0101H  Free DOS Memory Block
+0.9+  AX=0102H  Resize DOS Memory Block
+0.9+  AX=0200H  Get Real Mode Interrupt Vector
+0.9+  AX=0201H  Set Real Mode Interrupt Vector
+0.9+  AX=0202H  Get Processor Exception Handler Vector
+0.9+  AX=0203H  Set Processor Exception Handler Vector
+0.9+  AX=0204H  Get Protected Mode Interrupt Vector
+0.9+  AX=0205H  Set Protected Mode Interrupt Vector
+1.0+  AX=0210H  Get Protected Mode Extended Processor Exception Handler
+1.0+  AX=0211H  Get Real Mode Extended Processor Exception Handler
+1.0+  AX=0212H  Set Protected Mode Extended Processor Exception Handler
+1.0+  AX=0213H  Set Real Mode Extended Processor Exception Handler
+
+───────────────────────────────────────────────────────────────────────────────
+References:
+
+  Ralph Brown Interrupt List
+    [http://www.ctyme.com/intr/int-21.htm]
+
+  DOS Protected Mode Interface (DPMI) Specification 1.0 (March 12, 1991)
+    [http://ftp.cc.uoc.gr/mirrors/openwatcom/devel/docs/dpmi10.pdf]
+</pre></body>
+</html>
+
