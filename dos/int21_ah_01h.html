@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+<a href="int21.html#ah=01h" class="ttydoc">INT 21h</a> AH=01H Character Input with echo
+────────────────────────────────────────
+
+Input:
+    AH = 01h
+
+Output:
+    AL = Character read
+
+Action:
+    Read character (one byte) from standard input.
+
+    The character is also echoed to standard output.
+
+    Normally standard input is the keyboard. Under DOS 2.0 and higher standard
+    input may be redirected.
+
+Notes:
+
+    DOS checks for CTRL+C and CTRL+Break keys and executes INT 23h if read.
+
+    CTRL+P toggles the DOS internal echo-to-printer flag.
+
+    CTRL+Z is not interpreted, and does not cause EOF if input is redirected.
+
+See also:
+    INT 21H AH=06H Direct Console Output
+    INT 21H AH=07H Direct Character Input, Without Echo
+    INT 21H AH=08H Character Input Without Echo
+    INT 21H AH=0AH Buffered Input
+
+</pre></body>
+</html>
+
