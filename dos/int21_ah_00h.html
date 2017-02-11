@@ -28,6 +28,23 @@ Notes:
 
     Microsoft recommends using INT 21 AH=4CH for DOS 2.0 and higher.
 
+    This function is intended for use by .COM programs.
+
+    Documented DOS cleanup actions are:
+        - Flush the file buffers and close files, unlocking any regions locked
+          by the program.
+
+        - Restores INT 22H (terminate address) from CS:000AH of the PSP.
+
+        - Restores INT 23H (CTRL+C handler) from CS:000EH of the PSP.
+
+        - Restores INT 24H (Critical error handler) from CS:0012H of the PSP.
+
+        - Frees any memory owned by the terminating program.
+
+    After cleanup, DOS transfers control to the INT 22H address that it restored
+    from CS:000AH of the PSP.
+
     If the PSP is it's own parent, the process's memory is not freed.
     If INT 22h points into the terminating program, the process is effectively
     NOT terminated.
