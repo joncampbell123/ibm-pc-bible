@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+<a href="int21.html#ah=00h" class="ttydoc">INT 21h</a> AH=00H Terminate a Program
+──────────────────────────────────
+
+Input:
+    AH = 00h
+    CS = PSP segment
+
+Output:
+    Does not return
+
+Action:
+    Terminates the calling DOS process.
+
+    The program's return code (ERRORLEVEL) is set to 00H.
+
+    DOS will perform whatever cleanup it needs to do (including restoring
+    INT 22H through 24H from the PSP structure at CS:0000H) and then
+    execute the code stored at the (restored) INT 22h.
+
+Notes:
+
+    Microsoft recommends using INT 21 AH=4CH for DOS 2.0 and higher.
+
+    If the PSP is it's own parent, the process's memory is not freed.
+    If INT 22h points into the terminating program, the process is effectively
+    NOT terminated.
+
+    This call is not supported by the Microsoft Windows 3.0 DOSX.EXE
+    DOS extender.
+
+See also:
+    INT 21H AH=26H Create New Program Segment Prefix
+    INT 21H AH=31H Terminate and Stay Resident
+    INT 21H AH=4CH Terminate with Return Code
+    INT 20H Terminate Program
+    INT 22H Program Termination Address
+
+</pre></body>
+</html>
+

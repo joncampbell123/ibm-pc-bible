@@ -8,8 +8,16 @@ pre.ttydoc {
 body.ttydoc {
     margin: 0;
     padding: 0;
-    color: #BFBFBF;
+    color: #AAAAAA;
     background-color: #000000;
+}
+a.ttydoc {
+    color: #00AAAA;
+    text-decoration: none;
+}
+a.ttydoc:hover {
+    color: #000000;
+    background-color: #AAAAAA;
 }
 @font-face {
     font-family: "Ubunto Mono";
