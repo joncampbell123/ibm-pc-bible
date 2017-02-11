@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+<a href="int21.html#ah=02h" class="ttydoc">INT 21h</a> AH=02H Character Output
+────────────────────────────────────────
+
+Input:
+    AH = 02h
+    DL = Character to write
+
+Output:
+    AL = Undefined
+
+Output (MS-DOS 2.1-7.0):
+    AL = Last character output (despite official documentation)
+
+Action:
+
+    Sends the character in DL to standard output.
+
+Notes:
+
+    DOS checks for CTRL+C and CTRL+Break keys and executes INT 23h if pressed.
+
+    Standard output is normally the screen. Under DOS 2.0 or higher, standard
+    output can be redirected.
+
+    Official documentation says that this function does not return any value,
+    however the Ralph Brown Interrupt List notes that MS-DOS appears to leave
+    the last character written in AL on return.
+
+See also:
+
+    INT 21H AH=06H Direct Console I/O
+    INT 21H AH=09H Display String
+    INT 21H AH=40H Write to File via Handle
+
+</pre></body>
+</html>
+
