@@ -89,6 +89,16 @@ Ver  │ Func   │ Function
 1.0+  AX=0D03H  Free Serialization of Shared Memory
 1.0+  AX=0E00H  Get Coprocessor Status
 1.0+  AX=0E01H  Set Coprocessor Emulation
+      AX=EE00H  Get DOS32 Version and Selector Values (DOS32 3.0+)
+      AX=EE02H  Get DOS32 Address Information (DOS32 3.0+)
+      AX=EE10H  Set Up a DOS32 Loadable Library (DOS32 3.2+)
+      AX=EE11H  Load Library File (DOS32 3.2+)
+      AX=EE20H  Get Real Mode Callback Address with RETF Stack Frame (DOS32 3.0+)
+      AX=EE21H  Get Real Mode Callback Address with IRET Stack Frame (DOS32 3.0+)
+      AX=EE30H  Terminate and Stay Resident (DOS32 3.0+)
+      AX=EE40H  Undo Previous Memory Allocation or DMA Buffer (DOS32 3.0+)
+      AX=EE41H  Allocate 16KB DMA Block (DOS32 3.0+)
+      AX=EE42H  Allocate Memory Block (DOS32 3.0+)
 
 ───────────────────────────────────────────────────────────────────────────────
 References:
