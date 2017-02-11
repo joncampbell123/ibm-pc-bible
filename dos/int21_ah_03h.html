@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+<a href="int21.html#ah=03h" class="ttydoc">INT 21h</a> AH=03H Auxiliary Input (DOS 1.0+)
+───────────────────────────────────────────────────
+
+Input:
+    AH = 03h
+
+Output:
+    AL = Character read
+
+Action:
+    Read character (one byte) from standard auxiliary device.
+
+    Normally standard aux is the first serial port. Under DOS 2.0 and higher,
+    standard aux may be redirected.
+
+Notes:
+
+    DOS checks for CTRL+C and CTRL+Break keys and executes INT 23h if read.
+
+    The standard auxiliary device usually does not buffer data. If data is
+    coming in faster than the program can process it, characters may be lost.
+
+See also:
+    INT 21H AH=04H Auxiliary Output
+    INT 14H AH=02H READ CHARACTER FROM PORT
+
+</pre></body>
+</html>
+
