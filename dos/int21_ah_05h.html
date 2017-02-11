@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+<a href="int21.html#ah=05h" class="ttydoc">INT 21h</a> AH=05H Printer Output (DOS 1.0+)
+────────────────────────────────────────
+
+Input:
+    AH = 05h
+    DL = Character to write
+
+Output:
+    None
+
+Action:
+
+    Sends the character in DL to standard printer device.
+
+Notes:
+
+    DOS checks for CTRL+C and CTRL+Break keys, and executes INT 23h if pressed.
+
+    Normally standard printer is the first parallel port. Under DOS 2.0 and
+    higher, standard printer may be redirected.
+
+    If the printer is busy, this function will wait until it can send
+    the character.
+
+See also:
+
+    INT 17H AH=00H WRITE CHARACTER
+
+</pre></body>
+</html>
+
