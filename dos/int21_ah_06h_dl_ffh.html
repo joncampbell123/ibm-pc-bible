@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+<a href="int21.html#ah=06h&dl=ffh" class="ttydoc">INT 21h</a> AH=06H DL=FFH Direct Console Input (DOS 1.0+)
+─────────────────────────────────────────────────────
+
+Input:
+    AH = 06h
+    DL = FFh
+
+Output (if no character available):
+    AL = 00h (not documented)
+    ZF = 1
+
+Output (if character available):
+    AL = character read
+    ZF = 0
+
+Action:
+
+    Read and return a character from standard input. If no input is available,
+    the function returns immediately with ZF = 1.
+
+Notes:
+
+    DOS does not check for CTRL+C and CTRL+Break keys.
+
+    Standard input is normally the keyboard. Under DOS 2.0, standard input can
+    be redirected.
+
+    According to the Ralph Brown Interrupt List, AL = 00h and ZF = 1 when no
+    character is available is DOS behavior but not documented though some
+    programs rely on it.
+
+    If the input is an extended scan code (function keys, numeric keypad, etc.)
+    then this function will return AL = 00h and ZF = 0, and the next character
+    will be the scan code. Scan codes are always the scan code value returned
+    in AH by INT 16h.
+
+See also:
+
+</pre></body>
+</html>
+
