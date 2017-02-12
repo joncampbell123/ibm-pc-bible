@@ -21,9 +21,11 @@ Output (MS-DOS 2.1-7.0):
 Action:
 
     Sends the character in DL to standard output.
-    <a href="int21_ah_06h_dl_ffh.html" class="ttydoc">DL must be any value other than 0FFH</a>.
 
 Notes:
+
+    <a href="int21_ah_06h_dl_ffh.html" class="ttydoc">DL must be any value other than 0FFH</a>, or else this function becomes a
+    call for <a href="int21_ah_06h_dl_ffh.html" class="ttydoc">direct console input</a>.
 
     DOS does not check for CTRL+C and CTRL+Break keys.
 
