@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+All <a href="int.html#int20h_winvxd" class="ttydoc">INT 20h</a> Windows inter-VxD functions, ordered by device and service call numbers.
+
+These calls are only valid from Ring 0 of the Windows kernel, when running in
+386 enhanced mode (32-bit protected mode). In any other case, INT 20h is
+handled as the traditional DOS termination call.
+
+This form of calling is how VxD communicate between each other and the Windows
+kernel in Windows 3.0, 3.1, 95, 98, and ME. This documentation does not apply
+to Windows NT.
+
+INT 20h is handled with the expectation that 4 bytes follow the instruction.
+On return from INT 20h the instruction pointer is set 4 bytes past the first
+byte past INT 20h.
+
+Definitions:
+        VxD device number: a 16-bit word associated with a VxD.
+                           this number is assigned by Microsoft.
+
+        VxD service index: a 15-bit index into the VxD's service table.
+                           some VxDs do not have a service table.
+
+                           only bits 14:0 define the index.
+
+                           the MSB (bit 15) is set if the instruction
+                           is a JMP rather than a CALL.
+
+As assembler directives:
+        CD 20           INT 20H
+        ss ss           DW service index + JMP flag
+        dd dd           DW device number
+
+Alternative definition:
+        CD 20           INT 20H
+        ss ss dd dd     DD (device number &lt;&lt; 16) + service index
+
+Microsoft DDK macro:
+        CD 20 ss ss dd dd   VxDcall (device number &lt;&lt; 16) + service index
+        CD 20 ss ss dd dd   VxDjmp (device number &lt;&lt; 16) + service index + 0x8000
+
+The minimum Windows version required is included for reference.
+
+═══════════════════════════════════════════════════════════════════════════════
+Version │ Dev / Srv │ Description
+────────┴───────────┴──────────────────────────────────────────────────────────
+3.0+     0001H        VMM_Device_ID
+3.0+     0001H 0000H  Get_VMM_Version
+3.0+     0001H 0001H  Get_Cur_VM_Handle
+3.0+     0001H 0002H  Test_Cur_VM_Handle
+3.0+     0001H 0003H  Get_Sys_VM_Handle
+3.0+     0001H 0004H  Test_Sys_VM_Handle
+3.0+     0001H 0005H  Validate_VM_Handle
+3.0+     0002H        Debug_Device_ID
+3.0+     0003H        VPICD_Device_ID
+3.0+     0004H        VDMAD_Device_ID
+3.0+     0005H        VTD_Device_ID
+3.0+     0006H        V86MMGR_Device_ID
+3.0+     0007H        PageSwap_Device_ID
+3.0+     0008H        Parity_Device_ID
+3.0+     0009H        Reboot_Device_ID
+3.0+     000AH        VDD_Device_ID
+3.0+     000BH        VSD_Device_ID
+3.0+     000CH        VMD_Device_ID
+3.0+     000DH        VKD_Device_ID
+3.0+     000EH        VCD_Device_ID
+3.0+     000FH        VPD_Device_ID
+
+───────────────────────────────────────────────────────────────────────────
+References:
+
+  Ralph Brown Interrupt List
+    [http://www.ctyme.com/intr/int-21.htm]
+</pre></body>
+</html>
+
