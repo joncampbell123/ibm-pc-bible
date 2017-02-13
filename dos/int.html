@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+All interrupts, ordered by interrupt number.
+
+═══════════════════════════════════════════════════════════════════════════════
+          │ INT │ Service
+──────────┴─────┴──────────────────────────────────────────────────────────────
+CPU         00H   Divide by zero exception
+CPU         01H   Single step (debug)
+CPU         02H   Non-maskable interrupt
+CPU         03H   Breakpoint (debug)
+CPU         04H   Overflow exception
+CPU         05H   Bounds exception (80186/80286+ BOUND instruction)
+BIOS        05H   Print Screen
+CPU         06H   Invalid Opcode exception (80186/80286+)
+CPU         07H   Math Coprocessor Not Present exception
+CPU         08H   Double fault exception
+PIC         08H   IRQ 0 - System timer interrupt (can be relocated at PIC)
+CPU         09H   Math Coprocessor Segment Overrun exception
+PIC         09H   IRQ 1 - Keyboard interrupt (can be relocated at PIC)
+CPU         0AH   Invalid Task Segment State exception
+PIC         0AH   IRQ 2 - Cascade interrupt from second PIC (AT+)
+PIC         0AH   IRQ 2 - General adapter interrupt (PC/XT)
+CPU         0BH   Segment Not Present exception
+PIC         0BH   IRQ 3 - Serial port COM2 interrupt
+CPU         0CH   Stack Segment overflow exception
+PIC         0CH   IRQ 4 - Serial port COM1 interrupt
+CPU         0DH   General Protection Fault exception
+PIC         0DH   IRQ 5 - General adapter, LPT2 interrupt (AT+)
+PIC         0DH   IRQ 5 - Fixed disk interrupt (PC/XT)
+CPU         0EH   Page fault exception
+PIC         0EH   IRQ 6 - Floppy controller interrupt
+CPU         0FH   Reserved exception
+BIOS        10H   Video BIOS functions
+CPU         10H   Numeric Coprocessor Fault exception
+BIOS        11H   Equipment list
+BIOS        12H   Memory size
+BIOS        13H   Floppy and Hard drive functions
+BIOS        14H   Serial communications
+BIOS        15H   System services
+BIOS        16H   Keyboard services
+BIOS        17H   Parallel printer port services
+BIOS        18H   ROM BASIC (PC)
+BIOS        18H   BIOS boot failure (XT, AT+)
+BIOS        19H   Bootstrap loader
+BIOS        1AH   Time/Date services
+BIOS        1BH   Keyboard Break key interrupt
+BIOS        1CH   Timer tick interrupt
+BIOS        1DH   Video parameter table (DATA, not CODE)
+BIOS        1EH   Disk parameter table (DATA, not CODE)
+BIOS        1FH   Video graphics 8x8 font, first 128 chars (DATA, not CODE)
+DOS         20H   Terminate program
+Windows     20H   Windows VxDcall/VxDjmp inter-VxD call
+DOS         21H   DOS system services
+DOS         22H   Child process termination callback (equiv. SIGCHLD)
+DOS         23H   CTRL+C / Control+Break handler
+DOS         24H   Critical error handler
+DOS         25H   Absolute disk read (&lt;= 32MB)
+DOS 3.31+   25H CX=FFFFH Absolute disk read (&lt;= 2047MB)
+DOS         26H   Absolute disk write (&lt;= 32MB)
+DOS 3.31+   26H CX=FFFFH Absolute disk write (&lt;= 2047MB)
+DOS         27H   Terminate and Stay Resident
+DOS         28H   DOS Idle callback
+DOS         29H   Fast console output
+DOS         2AH   ???
+DOS         2BH   Reserved
+DOS         2CH   Reserved
+DOS         2DH   Reserved
+DOS         2DH   Alternate Multiplex Interrupt Specification
+DOS         2EH   Execute command with command interpreter
+DOS         2FH   Multiplex interrupt
+
+───────────────────────────────────────────────────────────────────────────
+References:
+
+  Ralph Brown Interrupt List
+    [http://www.ctyme.com/intr/int-21.htm]
+
+  Tech Help Manual INT 21h reference
+    [http://www.techhelpmanual.com/560-int_21h__dos_functions.html]
+
+  Microsoft Development Library July 1995
+
+  Microsoft Visual Studio 4.0 help documentation
+</pre></body>
+</html>
+
