@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+<a href="int21.html#ah=09h" class="ttydoc">INT 21h</a> AH=09H Display String (DOS 1.0+)
+────────────────────────────────────────
+
+Input:
+    AH = 09h
+    DS:DX = FAR 16:16 pointer to '$'-terminated strings
+
+Output (DOS behavior):
+    AL = '$' (despite official docs)
+
+Action:
+
+    Print the string at DS:DX until the '$' character, which defines the end of
+    the string.
+
+Notes:
+
+    DOS checks for CTRL+C and CTRL+Break keys and executes INT 23h if read.
+
+    Standard output is normally the screen. Under DOS 2.0 and higher, standard
+    output can be redirected.
+
+See also:
+
+    <a href="int21_ah_02h.html" class="ttydoc">INT 21H AH=02H WRITE CHARACTER TO STANDARD OUTPUT</a>
+
+</pre></body>
+</html>
+
