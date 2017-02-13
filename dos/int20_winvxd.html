@@ -48,6 +48,60 @@ Undefined_Device_ID is a special device ID for VxDs that do not need to provide
 services in Windows 3.x, and for VxDs that are dynamically loadable at runtime
 in Windows 95 and later.
 
+Most VxD services pass parameters using the CPU registers. Some calls also take
+parameters through the stack using a __cdecl calling convention, where
+parameters are pushed onto the stack right-to-left and the caller is expected
+to remove the parameters from the stack after the call.
+
+It's interesting to note the VxDcall and VxDjmp macros provided by Microsoft in
+their DDK allow parameters to be specified after VxDcall/VxDjmp following the
+VxD device and service call number, where the macro will then generate PUSH
+instructions for each parameter and generate "ADD ESP,&lt;n&gt;" after the
+VxDcall automatically.
+
+Example:
+        VxDcall     SomeVXDServiceCallThatNeedsParams, 0x12345678, EBX
+
+Becomes:
+        push        EBX
+        push        0x12345678
+        INT         20h
+        DD          SomeVXDServiceCallThatNeedsParams
+        add         esp,8                       ; two 32-bit PUSHes = 8 bytes
+
+For obvious reasons, parameters are NOT allowed for VxDjmp calls.
+
+For performance reasons, upon execution of a VxDcall/VxDjmp instruction,
+Windows will patch the INT 20h sequence with a CALL FAR ptr or JMP FAR ptr
+instruction. The slow process of searching the VxD linked list for a device
+ID, then looking up the service index, is done only once for every site in the
+driver's code when first encountered by the CPU after the driver is loaded
+into memory.
+
+The purpose of allowing a JMP to a VxD service, rather than a call, is
+(apparently) to allow the last service call in a driver's subroutine to
+return to Windows directly rather than return to the subroutine and then RET.
+
+Consider for example:
+
+            ; some code....
+            VxDcall     SomeCall
+            ; some code....
+            VxDcall     SomeOtherCall
+            ret
+
+Some sample code in their DDK will instead do this:
+
+            ; some code....
+            VxDcall     SomeCall
+            ; some code....
+            VxDjmp      SomeOtherCall
+
+The obvious reason this is done is to avoid using additional stack and to let
+the VxDcall do the work of returning to the caller instead of wasting time
+returning to a subroutine that will immediately RET anyway. Another way to put
+it, is to say that VxDjmp enables Windows drivers to execute a "tail call".
+
 The minimum Windows version required is included for reference.
 
 ═══════════════════════════════════════════════════════════════════════════════
