@@ -79,8 +79,8 @@ driver's code when first encountered by the CPU after the driver is loaded
 into memory.
 
 The purpose of allowing a JMP to a VxD service, rather than a call, is
-(apparently) to allow the last service call in a driver's subroutine to
-return to Windows directly rather than return to the subroutine and then RET.
+to allow the last service call in a driver's subroutine to return to caller
+indirectly through the VxD service call.
 
 Consider for example:
 
