@@ -44,11 +44,16 @@ Microsoft DDK macro:
         CD 20 ss ss dd dd   VxDcall (device number &lt;&lt; 16) + service index
         CD 20 ss ss dd dd   VxDjmp (device number &lt;&lt; 16) + service index + 0x8000
 
+Undefined_Device_ID is a special device ID for VxDs that do not need to provide
+services in Windows 3.x, and for VxDs that are dynamically loadable at runtime
+in Windows 95 and later.
+
 The minimum Windows version required is included for reference.
 
 ═══════════════════════════════════════════════════════════════════════════════
 Version │ Dev / Srv │ Description
 ────────┴───────────┴──────────────────────────────────────────────────────────
+         0000H        Undefined_Device_ID
 3.0+     0001H        VMM_Device_ID
 3.0+     0001H 0000H  Get_VMM_Version
 3.0+     0001H 0001H  Get_Cur_VM_Handle
