@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+<a href="int21.html#ah=07h" class="ttydoc">INT 21h</a> AH=07H Unfiltered Character Input without Echo (DOS 1.0+)
+─────────────────────────────────────────────────────────────────
+
+Input:
+    AH = 07h
+
+Output:
+    AL = Character read from standard input
+
+Action:
+
+    Read character from standard input.
+
+Notes:
+
+    DOS does not check for CTRL+C and CTRL+Break keys.
+
+    Standard input is normally the keyboard. Under DOS 2.0 and higher, standard
+    input can be redirected.
+
+See also:
+
+    INT 21H AH=01H READ CHARACTER FROM STANDARD INPUT, WITH ECHO
+    INT 21H AH=06H DIRECT CONSOLE OUTPUT
+    INT 21H AH=08H CHARACTER INPUT WITHOUT ECHO
+    INT 21H AH=0AH BUFFERED INPUT
+
+</pre></body>
+</html>
+
