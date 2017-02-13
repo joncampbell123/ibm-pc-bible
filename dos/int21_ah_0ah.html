@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+<a href="int21.html#ah=0ah" class="ttydoc">INT 21h</a> AH=0AH Buffered Line Input (DOS 1.0+)
+─────────────────────────────────────────────
+
+Input:
+    AH = 0Ah
+    DS:DX = FAR 16:16 Pointer to buffer structure
+
+    Buffer input:
+
+        - buffer_length must be length of buffer[] field
+
+        - input_length is set to the number of chars from prior input which
+          may be recalled, excluding the carriage return. if there is no prior
+          input, set to zero.
+
+        - buffer[] can contain prior input to recall if input_length != 0
+
+Output:
+    Buffer = structure updated with user input
+
+    Buffer output:
+
+        - buffer_length is unchanged from input
+
+        - input_length is set to the number of chars actually read, excluding
+          the carriage return.
+
+        - buffer[] contains the characters actually read, including the
+          carriage return.
+
+Buffer structure:
+
+    struct dos_buffered_structure { /* byte packed */
+        uint8_t     buffer_length;          /* +0x00 */
+        uint8_t     input_length;           /* +0x01 */
+        char        buffer[buffer_length];  /* +0x02 */
+    };
+
+    buffer_length:      maximum characters the buffer can hold
+
+    input_length:       number of characters actually held in the buffer
+                        (length of the string held in the buffer)
+
+    buffer[]:           actual characters in the buffer, including carriage
+                        return. this string is NOT NUL-terminated.
+
+Action:
+
+    Read characters and fill in the buffer, until carriage return.
+
+Notes:
+
+    DOS checks for CTRL+C and CTRL+Break keys and executes INT 23h if read.
+
+    If the maximum buffer size is set to 00H, the call returns immediately
+    without reading any input.
+
+    Standard input is normally the keyboard. Under DOS 2.0 and higher, standard
+    input can be redirected.
+
+See also:
+
+    INT 21H AH=0CH FLUSH BUFFER AND READ STANDARD INPUT
+
+</pre></body>
+</html>
+
