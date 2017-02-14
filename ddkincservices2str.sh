@@ -5,7 +5,7 @@ file=/mnt/main/emu/win31ddk/DDK/386/include/vmm.inc
 #file=~/Downloads/x/ddk95/Inc32/VMM.INC
 count=0
 
-ver="3.0+"
+ver="3.1+"
 device=0x0001
 
 grep -R "VMM_Service" $file | cut -d $'\t' -f 2 | cut -d ',' -f 1 | sed -e 's/\x0D//g' | while read X; do
