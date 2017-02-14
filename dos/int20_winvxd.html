@@ -922,7 +922,46 @@ Version │ Dev / Srv │ Description
 3.1+     0023H        MCA_POS_Device_ID
 3.1+     0024H        SCSIFD_Device_ID
 3.1+     0025H        VPEND_Device_ID
-3.1+     0026H        APM_Device_ID (also known as VPOWERD in v4.0+)
+3.1+     0026H        APM_Device_ID (Windows 95: VPOWERD_DEVICE_ID)
+4.0+     0026H 0000H  _VPOWERD_Get_Version
+4.0+     0026H 0001H  _VPOWERD_Get_APM_BIOS_Version
+4.0+     0026H 0002H  _VPOWERD_Get_Power_Management_Level
+4.0+     0026H 0003H  _VPOWERD_Set_Power_Management_Level
+4.0+     0026H 0004H  _VPOWERD_Set_Device_Power_State
+4.0+     0026H 0005H  _VPOWERD_Set_System_Power_State
+4.0+     0026H 0006H  _VPOWERD_Restore_Power_On_Defaults
+4.0+     0026H 0007H  _VPOWERD_Get_Power_Status
+4.0+     0026H 0008H  _VPOWERD_Get_Power_State
+4.0+     0026H 0009H  _VPOWERD_OEM_APM_Function
+4.0+     0026H 000AH  _VPOWERD_Register_Power_Handler
+4.0+     0026H 000BH  _VPOWERD_Deregister_Power_Handler
+4.0+     0026H 000CH  _VPOWERD_W32_Get_System_Power_Status
+4.0+     0026H 000DH  _VPOWERD_W32_Set_System_Power_State
+4.10+    0026H 000EH  _VPOWERD_Get_Capabilities
+4.10+    0026H 000FH  _VPOWERD_Enable_Resume_On_Ring
+4.10+    0026H 0010H  _VPOWERD_Disable_Resume_On_Ring
+4.10+    0026H 0011H  _VPOWERD_Set_Resume_Timer
+4.10+    0026H 0012H  _VPOWERD_Get_Resume_Timer
+4.10+    0026H 0013H  _VPOWERD_Disable_Resume_Timer
+4.10+    0026H 0014H  _VPOWERD_Enable_Timer_Based_Requests
+4.10+    0026H 0015H  _VPOWERD_Disable_Timer_Based_Requests
+4.10+    0026H 0016H  _VPOWERD_W32_Get_Power_Status
+4.10+    0026H 0017H  _VPOWERD_Get_Timer_Based_Requests_Status
+4.10+    0026H 0018H  _VPOWERD_Get_Ring_Resume_Status
+4.10+    0026H 0019H  _VPOWERD_Transfer_Control
+4.10+    0026H 001AH  _VPOWERD_OS_Shutdown
+4.10+    0026H 001BH  _VPOWERD_Indicate_User_Arrival
+4.10+    0026H 001CH  _VPOWERD_Get_Battery_Unit_Status
+4.10+    0026H 001DH  _VPOWERD_Get_Battery_Unit_Presence
+4.10+    0026H 001EH  _VPOWERD_Disable_APM_Idle
+4.10+    0026H 001FH  _VPOWERD_Enable_APM_Idle
+4.10+    0026H 0020H  _VPOWERD_Get_Mode
+4.10+    0026H 0021H  _VPOWERD_Critical_Shutdown
+4.90+    0026H 0022H  _VPOWERD_Disable_Hibernate
+4.90+    0026H 0023H  _VPOWERD_Reboot
+4.90+    0026H 0024H  _VPOWERD_Log_Suspend_Failure
+4.90+    0026H 0025H  _VPOWERD_RtInfo
+4.90+    0026H 0026H  _VPOWERD_Get_Global_Flags
 
 ───────────────────────────────────────────────────────────────────────────
 
