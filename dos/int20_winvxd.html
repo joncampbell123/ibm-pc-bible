@@ -856,6 +856,35 @@ Version │ Dev / Srv │ Description
 4.0+     0015H 0012H  DOSMGR_MMGR_PSP_Change_Notifier
 3.0+     0016H        WINLOAD_Device_ID
 3.0+     0017H        SHELL_Device_ID
+3.1+     0017H 0000H  SHELL_Get_Version
+3.1+     0017H 0001H  SHELL_Resolve_Contention
+3.1+     0017H 0002H  SHELL_Event
+3.1+     0017H 0003H  SHELL_SYSMODAL_Message
+3.1+     0017H 0004H  SHELL_Message
+3.1+     0017H 0005H  SHELL_GetVMInfo
+4.0+     0017H 0006H  _SHELL_PostMessage
+4.0+     0017H 0007H  _SHELL_ShellExecute
+4.0+     0017H 0008H  _SHELL_PostShellMessage
+4.0+     0017H 0009H  SHELL_DispatchRing0AppyEvents
+4.0+     0017H 000AH  SHELL_Hook_Properties
+4.0+     0017H 000BH  SHELL_Unhook_Properties
+4.0+     0017H 000CH  SHELL_Update_User_Activity
+4.0+     0017H 000DH  _SHELL_QueryAppyTimeAvailable
+4.0+     0017H 000EH  _SHELL_CallAtAppyTime
+4.0+     0017H 000FH  _SHELL_CancelAppyTimeEvent
+4.0+     0017H 0010H  _SHELL_BroadcastSystemMessage
+4.0+     0017H 0011H  _SHELL_HookSystemBroadcast
+4.0+     0017H 0012H  _SHELL_UnhookSystemBroadcast
+4.0+     0017H 0013H  _SHELL_LocalAllocEx
+4.0+     0017H 0014H  _SHELL_LocalFree
+4.0+     0017H 0015H  _SHELL_LoadLibrary
+4.0+     0017H 0016H  _SHELL_FreeLibrary
+4.0+     0017H 0017H  _SHELL_GetProcAddress
+4.0+     0017H 0018H  _SHELL_CallDll
+4.0+     0017H 0019H  _SHELL_SuggestSingleMSDOSMode
+4.0+     0017H 001AH  SHELL_CheckHotkeyAllowed
+4.0+     0017H 001BH  _SHELL_GetDOSAppInfo
+4.10+    0017H 001CH  _SHELL_Update_User_Activity_Ex
 3.0+     0018H        VMPoll_Device_ID
 3.0+     0019H        VPROD_Device_ID
 3.0+     001AH        DOSNET_Device_ID
@@ -893,6 +922,7 @@ TODO:
         - EBIOS
         - VNETBIOS
         - DOSMGR
+        - SHELL
 
 TODO:
 
