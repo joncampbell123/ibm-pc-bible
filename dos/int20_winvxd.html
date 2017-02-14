@@ -633,6 +633,22 @@ Version │ Dev / Srv │ Description
 
 ───────────────────────────────────────────────────────────────────────────
 
+TODO:
+
+    Some VXD service lists only list all symbols as 3.1 or higher because
+    I do not have the Windows 3.0 DDK.
+
+    However the boundary between 3.0 symbols and 3.1 symbols can be determined
+    by running Windows 3.0, and then using the VXD enumeration tool in DOSLIB
+    to look at the length of the VXD service table.
+
+    VXD devices yet to examine in this way are:
+        - DEBUG
+        - VPICD
+        - VDMAD
+
+───────────────────────────────────────────────────────────────────────────
+
 Version number to Windows version for use with the table above.
 
 3.0                   Microsoft Windows 3.0
