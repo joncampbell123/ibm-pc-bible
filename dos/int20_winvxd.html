@@ -1381,6 +1381,17 @@ and therefore do not shed any light on the VxD-by-name VxDcall mechanism.
 Name-based support is evident in Windows 95 by the way that VMM function
 Get_DDB allows locating the DDB of a VxD by either device ID or name.
 
+The DDK seems to provide support in it's macros for defining a VXD device
+by name, however, it does not appear to generate all required symbols for
+it to work. Attempting to define a VxD service table by name will result
+in a complaint by the linker about undefined symbol ___(name)STable.
+For example, if you try to define a service table for a VxD by the name of
+"Happy" in for another VxD to call, you will get linker error message
+"unresolved external symbol ___HappySTable". It's not clear what tool in
+the DDK is meant to generate this symbol or even if the tool is provided.
+I can only guess that the STable suffix means the symbol is a string table
+of some unknown format.
+
 ───────────────────────────────────────────────────────────────────────────
 
 TODO:
