@@ -1390,7 +1390,8 @@ For example, if you try to define a service table for a VxD by the name of
 "unresolved external symbol ___HappySTable". It's not clear what tool in
 the DDK is meant to generate this symbol or even if the tool is provided.
 I can only guess that the STable suffix means the symbol is a string table
-of some unknown format.
+of some unknown format. It is also not clear how Windows 95 would locate
+this STable symbol when it needs to look up what device ID &gt;= F000H is.
 
 ───────────────────────────────────────────────────────────────────────────
 
