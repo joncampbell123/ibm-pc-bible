@@ -1137,6 +1137,42 @@ Version │ Dev / Srv │ Description
 4.10+    002AH 002EH  _VWIN32_GetCurThreadCondition
 4.10+    002AH 002FH  VWIN32_Init_FP
 4.0+     002BH        VCOMM_DEVICE_ID
+4.0+     002BH 0000H  VCOMM_Get_Version
+4.0+     002BH 0001H  _VCOMM_Register_Port_Driver
+4.0+     002BH 0002H  _VCOMM_Acquire_Port
+4.0+     002BH 0003H  _VCOMM_Release_Port
+4.0+     002BH 0004H  _VCOMM_OpenComm
+4.0+     002BH 0005H  _VCOMM_SetCommState
+4.0+     002BH 0006H  _VCOMM_GetCommState
+4.0+     002BH 0007H  _VCOMM_SetupComm
+4.0+     002BH 0008H  _VCOMM_TransmitCommChar
+4.0+     002BH 0009H  _VCOMM_CloseComm
+4.0+     002BH 000AH  _VCOMM_GetCommQueueStatus
+4.0+     002BH 000BH  _VCOMM_ClearCommError
+4.0+     002BH 000CH  _VCOMM_GetModemStatus
+4.0+     002BH 000DH  _VCOMM_GetCommProperties
+4.0+     002BH 000EH  _VCOMM_EscapeCommFunction
+4.0+     002BH 000FH  _VCOMM_PurgeComm
+4.0+     002BH 0010H  _VCOMM_SetCommEventMask
+4.0+     002BH 0011H  _VCOMM_GetCommEventMask
+4.0+     002BH 0012H  _VCOMM_WriteComm
+4.0+     002BH 0013H  _VCOMM_ReadComm
+4.0+     002BH 0014H  _VCOMM_EnableCommNotification
+4.0+     002BH 0015H  _VCOMM_GetLastError
+4.0+     002BH 0016H  _VCOMM_Steal_Port
+4.0+     002BH 0017H  _VCOMM_SetReadCallBack
+4.0+     002BH 0018H  _VCOMM_SetWriteCallBack
+4.0+     002BH 0019H  _VCOMM_Add_Port
+4.0+     002BH 001AH  _VCOMM_GetSetCommTimeouts
+4.0+     002BH 001BH  _VCOMM_SetWriteRequest
+4.0+     002BH 001CH  _VCOMM_SetReadRequest
+4.0+     002BH 001DH  _VCOMM_Dequeue_Request
+4.0+     002BH 001EH  _VCOMM_Enumerate_DevNodes
+4.0+     002BH 001FH  VCOMM_Map_Win32DCB_To_Ring0
+4.0+     002BH 0020H  VCOMM_Map_Ring0DCB_To_Win32
+4.0+     002BH 0021H  _VCOMM_Get_Contention_Handler
+4.0+     002BH 0022H  _VCOMM_Map_Name_To_Resource
+4.10+    002BH 0023H  _VCOMM_PowerOnOffComm
 4.0+     002CH        SPOOLER_DEVICE_ID
 4.0+     002DH        WIN32S_DEVICE_ID
 4.0+     002EH        DEBUGCMD_DEVICE_ID
