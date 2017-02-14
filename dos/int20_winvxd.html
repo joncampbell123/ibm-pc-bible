@@ -1088,6 +1088,54 @@ Version │ Dev / Srv │ Description
 4.10+    0028H 0065H  NdisWaitEvent
 4.0+     0029H        BIOS_EXT_DEVICE_ID
 4.0+     002AH        VWIN32_DEVICE_ID
+4.0+     002AH 0000H  VWIN32_Get_Version
+4.0+     002AH 0001H  VWIN32_DIOCCompletionRoutine
+4.0+     002AH 0002H  _VWIN32_QueueUserApc
+4.0+     002AH 0003H  _VWIN32_Get_Thread_Context
+4.0+     002AH 0004H  _VWIN32_Set_Thread_Context
+4.0+     002AH 0005H  _VWIN32_CopyMem
+4.0+     002AH 0006H  _VWIN32_Npx_Exception
+4.0+     002AH 0007H  _VWIN32_Emulate_Npx
+4.0+     002AH 0008H  _VWIN32_CheckDelayedNpxTrap
+4.0+     002AH 0009H  VWIN32_EnterCrstR0
+4.0+     002AH 000AH  VWIN32_LeaveCrstR0
+4.0+     002AH 000BH  _VWIN32_FaultPopup
+4.0+     002AH 000CH  VWIN32_GetContextHandle
+4.0+     002AH 000DH  VWIN32_GetCurrentProcessHandle
+4.0+     002AH 000EH  _VWIN32_SetWin32Event
+4.0+     002AH 000FH  _VWIN32_PulseWin32Event
+4.0+     002AH 0010H  _VWIN32_ResetWin32Event
+4.0+     002AH 0011H  _VWIN32_WaitSingleObject
+4.0+     002AH 0012H  _VWIN32_WaitMultipleObjects
+4.0+     002AH 0013H  _VWIN32_CreateRing0Thread
+4.0+     002AH 0014H  _VWIN32_CloseVxDHandle
+4.0+     002AH 0015H  VWIN32_ActiveTimeBiasSet
+4.0+     002AH 0016H  VWIN32_GetCurrentDirectory
+4.0+     002AH 0017H  VWIN32_BlueScreenPopup
+4.0+     002AH 0018H  VWIN32_TerminateApp
+4.0+     002AH 0019H  _VWIN32_QueueKernelAPC
+4.0+     002AH 001AH  VWIN32_SysErrorBox
+4.0+     002AH 001BH  _VWIN32_IsClientWin32
+4.0+     002AH 001CH  VWIN32_IFSRIPWhenLev2Taken
+4.10+    002AH 001DH  _VWIN32_InitWin32Event
+4.10+    002AH 001EH  _VWIN32_InitWin32Mutex
+4.10+    002AH 001FH  _VWIN32_ReleaseWin32Mutex
+4.10+    002AH 0020H  _VWIN32_BlockThreadEx
+4.10+    002AH 0021H  VWIN32_GetProcessHandle
+4.10+    002AH 0022H  _VWIN32_InitWin32Semaphore
+4.10+    002AH 0023H  _VWIN32_SignalWin32Sem
+4.10+    002AH 0024H  _VWIN32_QueueUserApcEx
+4.10+    002AH 0025H  _VWIN32_OpenVxDHandle
+4.10+    002AH 0026H  _VWIN32_CloseWin32Handle
+4.10+    002AH 0027H  _VWIN32_AllocExternalHandle
+4.10+    002AH 0028H  _VWIN32_UseExternalHandle
+4.10+    002AH 0029H  _VWIN32_UnuseExternalHandle
+4.10+    002AH 002AH  _VWIN32_ReferenceObject
+4.10+    002AH 002BH  _VWIN32_GetExternalHandle
+4.10+    002AH 002CH  _VWIN32_SetWin32EventBoostPriority
+4.10+    002AH 002DH  _VWIN32_GetRing3Flat32Selectors
+4.10+    002AH 002EH  _VWIN32_GetCurThreadCondition
+4.10+    002AH 002FH  VWIN32_Init_FP
 4.0+     002BH        VCOMM_DEVICE_ID
 4.0+     002CH        SPOOLER_DEVICE_ID
 4.0+     002DH        WIN32S_DEVICE_ID
