@@ -680,6 +680,65 @@ Version │ Dev / Srv │ Description
 3.0+     0008H        Parity_Device_ID
 3.0+     0009H        Reboot_Device_ID
 3.0+     000AH        VDD_Device_ID
+3.1+     000AH 0000H  VDD_Get_Version
+3.1+     000AH 0001H  VDD_PIF_State
+3.1+     000AH 0002H  VDD_Get_GrabRtn
+3.1+     000AH 0003H  VDD_Hide_Cursor
+3.1+     000AH 0004H  VDD_Set_VMType
+3.1+     000AH 0005H  VDD_Get_ModTime
+3.1+     000AH 0006H  VDD_Set_HCurTrk
+3.1+     000AH 0007H  VDD_Msg_ClrScrn
+3.1+     000AH 0008H  VDD_Msg_ForColor
+3.1+     000AH 0009H  VDD_Msg_BakColor
+3.1+     000AH 000AH  VDD_Msg_TextOut
+3.1+     000AH 000BH  VDD_Msg_SetCursPos
+3.1+     000AH 000CH  VDD_Query_Access
+3.1+     000AH 000DH  VDD_Check_Update_Soon
+4.0+     000AH 000EH  VDD_Get_Mini_Dispatch_Table
+4.0+     000AH 000FH  VDD_Register_Virtual_Port
+4.0+     000AH 0010H  VDD_Get_VM_Info
+4.0+     000AH 0011H  VDD_Get_Special_VM_IDs
+4.0+     000AH 0012H  VDD_Register_Extra_Screen_Selector
+4.0+     000AH 0013H  VDD_Takeover_VGA_Port
+4.0+     000AH 0014H  VDD_Get_DISPLAYINFO
+4.0+     000AH 0015H  VDD_Do_Physical_IO
+4.0+     000AH 0016H  VDD_Set_Sleep_Flag_Addr
+4.10+    000AH 0016H  VDD_Register_Mini_VDD
+4.10+    000AH 0017H  VDD_Install_IO_Handler
+4.10+    000AH 0018H  VDD_Install_Mult_IO_Handlers
+4.10+    000AH 0019H  VDD_Enable_Local_Trapping
+4.10+    000AH 001AH  VDD_Disable_Local_Trapping
+4.10+    000AH 001BH  VDD_Trap_Suspend
+4.10+    000AH 001CH  Test_Vid_VM_Handle
+4.10+    000AH 001DH  VDD_Set_Core_Graphics
+4.10+    000AH 001EH  VDD_Load_AccBIOS
+4.10+    000AH 001FH  VDD_Map_AccBIOS
+4.10+    000AH 0020H  VDD_Map_VRAM
+4.10+    000AH 0021H  VDD_EnableDevice
+4.10+    000AH 0022H  VDD_Get_Version
+4.10+    000AH 0023H  VDD_PIF_State
+4.10+    000AH 0024H  VDD_Get_GrabRtn
+4.10+    000AH 0025H  VDD_Hide_Cursor
+4.10+    000AH 0026H  VDD_Set_VMType
+4.10+    000AH 0027H  VDD_Get_ModTime
+4.10+    000AH 0028H  VDD_Set_HCurTrk
+4.10+    000AH 0029H  VDD_Msg_ClrScrn
+4.10+    000AH 002AH  VDD_Msg_ForColor
+4.10+    000AH 002BH  VDD_Msg_BakColor
+4.10+    000AH 002CH  VDD_Msg_TextOut
+4.10+    000AH 002DH  VDD_Msg_SetCursPos
+4.10+    000AH 002EH  VDD_Query_Access
+4.10+    000AH 002FH  VDD_Check_Update_Soon
+4.10+    000AH 0030H  VDD_Get_Mini_Dispatch_Table
+4.10+    000AH 0031H  VDD_Register_Virtual_Port
+4.10+    000AH 0032H  VDD_Get_VM_Info
+4.10+    000AH 0033H  VDD_Get_Special_VM_IDs
+4.10+    000AH 0034H  VDD_Register_Extra_Screen_Selector
+4.10+    000AH 0035H  VDD_Takeover_VGA_Port
+4.10+    000AH 0036H  VDD_Get_DISPLAYINFO
+4.10+    000AH 0037H  VDD_Do_Physical_IO
+4.10+    000AH 0038H  VDD_Set_Sleep_Flag_Addr
+4.10+    000AH 0039H  VDD_EnableDevice
 3.0+     000BH        VSD_Device_ID
 3.0+     000CH        VMD_Device_ID
 3.0+     000DH        VKD_Device_ID
@@ -704,6 +763,7 @@ TODO:
         - VTD
         - V86MMGR
         - PAGESWAP
+        - VDD
 
 TODO:
 
