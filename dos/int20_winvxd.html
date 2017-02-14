@@ -908,6 +908,16 @@ Version │ Dev / Srv │ Description
 3.1+     0020H 0003H  Int13_Hooking_BIOS_Int
 3.1+     0020H 0004H  Int13_Unhooking_BIOS_Int
 3.1+     0021H        PageFile_Device_ID
+3.1+     0021H 0000H  PageFile_Get_Version
+3.1+     0021H 0001H  PageFile_Init_File
+3.1+     0021H 0002H  PageFile_Clean_Up
+3.1+     0021H 0003H  PageFile_Grow_File
+3.1+     0021H 0004H  PageFile_Read_Or_Write
+3.1+     0021H 0005H  PageFile_Cancel
+3.1+     0021H 0006H  PageFile_Test_IO_Valid
+4.0+     0021H 0007H  PageFile_Get_Size_Info
+4.0+     0021H 0008H  PageFile_Set_Async_Manager
+4.0+     0021H 0009H  PageFile_Call_Async_Manager
 3.1+     0022H        SCSI_Device_ID
 3.1+     0023H        MCA_POS_Device_ID
 3.1+     0024H        SCSIFD_Device_ID
