@@ -759,6 +759,31 @@ Version │ Dev / Srv │ Description
 4.0+     000CH 000AH  VMD_Enable_Disable_Mouse_Events
 4.0+     000CH 000BH  VMD_Post_Absolute_Pointer_Message
 3.0+     000DH        VKD_Device_ID
+3.1+     000DH 0000H  VKD_Get_Version
+3.1+     000DH 0001H  VKD_Define_Hot_Key
+3.1+     000DH 0002H  VKD_Remove_Hot_Key
+3.1+     000DH 0003H  VKD_Local_Enable_Hot_Key
+3.1+     000DH 0004H  VKD_Local_Disable_Hot_Key
+3.1+     000DH 0005H  VKD_Reflect_Hot_Key
+3.1+     000DH 0006H  VKD_Cancel_Hot_Key_State
+3.1+     000DH 0007H  VKD_Force_Keys
+3.1+     000DH 0008H  VKD_Get_Kbd_Owner
+3.1+     000DH 0009H  VKD_Define_Paste_Mode
+3.1+     000DH 000AH  VKD_Start_Paste
+3.1+     000DH 000BH  VKD_Cancel_Paste
+3.1+     000DH 000CH  VKD_Get_Msg_Key
+3.1+     000DH 000DH  VKD_Peek_Msg_Key
+3.1+     000DH 000EH  VKD_Flush_Msg_Key_Queue
+4.0+     000DH 000FH  VKD_Enable_Keyboard
+4.0+     000DH 0010H  VKD_Disable_Keyboard
+4.0+     000DH 0011H  VKD_Get_Shift_State
+4.0+     000DH 0012H  VKD_Filter_Keyboard_Input
+4.0+     000DH 0013H  VKD_Put_Byte
+4.0+     000DH 0014H  VKD_Set_Shift_State
+4.10+    000DH 0015H  VKD_Send_Data
+4.10+    000DH 0016H  VKD_Set_LEDs
+4.10+    000DH 0017H  VKD_Set_Key_Rate
+4.10+    000DH 0018H  VKD_Get_Key_Rate (Commented out in Win98 DDK)
 3.0+     000EH        VCD_Device_ID
 3.0+     000FH        VPD_Device_ID
 
@@ -783,6 +808,7 @@ TODO:
         - VDD
         - VSD
         - VMD/VMOUSE
+        - VKD
 
 TODO:
 
@@ -797,6 +823,15 @@ TODO:
     VXD devices yet to examine in this way are:
         - PARITY
         - REBOOT (NOTE: There are service calls according to RBIL)
+
+TODO:
+
+    VKD_Get_Key_Rate is listed as an enumeration in the Windows 98 DDK,
+    but commented out. It is NOT commented out in the Windows ME DDK.
+
+    That means either a) it was planned for but never implemented in
+    Windows 98, therefore does not exist or b) does exist, but DDK
+    commented it out for some reason such as unstable function.
 
 ───────────────────────────────────────────────────────────────────────────
 
