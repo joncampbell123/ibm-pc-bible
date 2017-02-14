@@ -835,6 +835,25 @@ Version │ Dev / Srv │ Description
 4.0+     0014H 0006H  VNETBIOS_Map
 4.0+     0014H 0007H  VNETBIOS_Enum2
 3.0+     0015H        DOSMGR_Device_ID
+3.1+     0015H 0000H  DOSMGR_Get_Version
+3.1+     0015H 0001H  _DOSMGR_Set_Exec_VM_Data
+3.1+     0015H 0002H  DOSMGR_Copy_VM_Drive_State
+3.1+     0015H 0003H  _DOSMGR_Exec_VM
+3.1+     0015H 0004H  DOSMGR_Get_IndosPtr
+3.1+     0015H 0005H  DOSMGR_Add_Device
+3.1+     0015H 0006H  DOSMGR_Remove_Device
+3.1+     0015H 0007H  DOSMGR_Instance_Device
+3.1+     0015H 0008H  DOSMGR_Get_DOS_Crit_Status
+3.1+     0015H 0009H  DOSMGR_Enable_Indos_Polling
+3.1+     0015H 000AH  DOSMGR_BackFill_Allowed
+3.1+     0015H 000BH  DOSMGR_LocalGlobalReg
+4.0+     0015H 000CH  DOSMGR_Init_UMB_Area
+4.0+     0015H 000DH  DOSMGR_Begin_V86_App
+4.0+     0015H 000EH  DOSMGR_End_V86_App
+4.0+     0015H 000FH  DOSMGR_Alloc_Local_Sys_VM_Mem
+4.0+     0015H 0010H  DOSMGR_Grow_CDSs
+4.0+     0015H 0011H  DOSMGR_Translate_Server_DOS_Call
+4.0+     0015H 0012H  DOSMGR_MMGR_PSP_Change_Notifier
 3.0+     0016H        WINLOAD_Device_ID
 3.0+     0017H        SHELL_Device_ID
 3.0+     0018H        VMPoll_Device_ID
@@ -873,6 +892,7 @@ TODO:
         - VMCPD
         - EBIOS
         - VNETBIOS
+        - DOSMGR
 
 TODO:
 
