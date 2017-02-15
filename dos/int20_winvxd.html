@@ -1544,7 +1544,29 @@ Version │ Dev / Srv │ Description
 4.10+    004CH 001AH  _ACPI_ResumeComplete (Windows ME: Obsolete)
 4.90+    004CH 001BH  _ACPI_Enter_Leave_Locked_Phase
 4.10+    004DH        UDF_DEVICE_ID
-4.10+    004EH        SMCLIB_DEVICE_ID
+4.10+    004EH        SMCLIB_DEVICE_ID (Smartcard driver)
+4.10+    004EH 0000H  SMCLIB_Get_Version
+4.10+    004EH 0001H  SMCLIB_SmartcardCreateLink
+4.10+    004EH 0002H  SMCLIB_SmartcardDeleteLink
+4.10+    004EH 0003H  SMCLIB_SmartcardDeviceControl
+4.10+    004EH 0004H  SMCLIB_SmartcardExit
+4.10+    004EH 0005H  SMCLIB_SmartcardInitialize
+4.10+    004EH 0006H  SMCLIB_SmartcardLogError
+4.10+    004EH 0007H  SMCLIB_SmartcardRawReply
+4.10+    004EH 0008H  SMCLIB_SmartcardRawRequest
+4.10+    004EH 0009H  SMCLIB_SmartcardT0Reply
+4.10+    004EH 000AH  SMCLIB_SmartcardT0Request
+4.10+    004EH 000BH  SMCLIB_SmartcardT1Reply
+4.10+    004EH 000CH  SMCLIB_SmartcardT1Request
+4.10+    004EH 000DH  SMCLIB_SmartcardUpdateCardCapabilities
+4.10+    004EH 000EH  SMCLIB_SmartcardGetDebugLevel
+4.10+    004EH 000FH  SMCLIB_SmartcardSetDebugLevel
+4.10+    004EH 0010H  SMCLIB_MapNtStatusToWinError
+4.10+    004EH 0011H  SMCLIB_Assert
+4.10+    004EH 0012H  SMCLIB_VxD_CreateDevice
+4.10+    004EH 0013H  SMCLIB_VxD_DeleteDevice
+4.10+    004EH 0014H  SMCLIB_SmartcardCompleteCardTracking
+4.10+    004EH 0015H  SMCLIB_SmartcardCompleteRequest
          004FH        ???
          0050H        ???
          0051H        ???
