@@ -109,10 +109,14 @@ Version │ Dev / Srv │ Description
 ────────┴───────────┴──────────────────────────────────────────────────────────
          0000H        Undefined_Device_ID
 4.0+     0000H        ATAPCHNG (??? Windows 95 OSR2)
+4.0+     0000H        ATI (ATI driver Windows 95)
+4.0+     0000H        ATI_M64 (ATI Mach64 driver Windows 95)
 4.90+    0000H        CBSS (??? Windows ME)
 4.0+     0000H        CDFS (CD-ROM filesystem driver)
 4.0+     0000H        CDTSD (CD-ROM ??? virtual device for Windows 95)
 4.0+     0000H        CDVSD (CD-ROM ??? virtual device for Windows 95)
+4.0+     0000H        CHIPS (Chips &amp; Technologies driver for Windows 95)
+4.0+     0000H        CIRRUS (??? driver Windows 95)
 3.0+     0000H        COMBUFF
 3.1+     0000H        CPBNMI (Central Point Software)
 4.10+    0000H        DCAPVXD (??? Windows 98)
@@ -134,6 +138,7 @@ Version │ Dev / Srv │ Description
 4.90+    0000H        JOYHID (??? Windows ME)
 4.90+    0000H        KBDHID (??? Windows ME)
 4.0+     0000H        LA20HMA (Windows 95 Local A20 for Global HMA)
+4.0+     0000H        LAGUNA (Windows 95 ??? driver)
 4.0+     0000H        LPT (Windows 95)
 4.0+     0000H        LPTENUM (??? Windows 95)
 4.90+    0000H        MOUHID (??? Windows ME)
@@ -1698,7 +1703,7 @@ Version │ Dev / Srv │ Description
 4.0+     044AH 0005H  _MMDEVLDR_AddEnvironmentString
 4.10+    044AH 0006H  _MMDEVLDR_DeviceInitComplete
          044BH        ???
-4.0+     044CH        MSMPU401_Device_ID (MPU-401)
+4.0+     044CH        MSMPU401_Device_ID (MPU-401) / CWBMIDI
 4.0+     044DH        MSOPL_Device_ID (ADLIB FM)
          044EH        ???
          044FH        ???
@@ -1726,6 +1731,7 @@ Version │ Dev / Srv │ Description
          045DH 0007H  VflatD_Query_Bank_Info
          045EH        ???
 4.0+     045FH        MSSNDSYS_Device_ID (Sound Blaster/Windows Sound System)
+4.0+     045FH        azt16 AZTVXD (??? driver for Windows 95)
 
 3.1+     0473H        VSS6D (Gallant Sound Card driver, SC400)
 
@@ -1841,11 +1847,19 @@ Version │ Dev / Srv │ Description
 
 4.10+    33A2H        VrtwD (??? Windows 98)
 
+4.0+     33F5H        AUDDRV (??? Windows 95)
+
 4.0+     34D2H        DCGVDD (??? Window 95 OSR2)
 
 4.0+     357EH        DSOUND.VXD (Microsoft DirectX DirectSound)
 
+4.0+     3584H        VSNDSYS (??? Windows 95)
+
 4.10+    39D2H        MM3DFX (3Dfx drivers, Windows 98)
+
+4.0+     3A4DH        CHIPS (Chips &amp; Technologies Windows 95 driver)
+
+4.0+     3A59H        CWBJOY (??? Windows 95)
 
 4.0+     3A72H        EMU10K1 (Creative Sound Blaster Live! driver)
 
