@@ -1592,6 +1592,37 @@ Version │ Dev / Srv │ Description
 4.0+     0489H        VIP_Device_ID
 4.0+     048AH        VTCP_Device_ID
 4.0+     048BH        VCache_Device_ID
+4.0+     048BH 0000H  VCache_Get_Version
+4.0+     048BH 0001H  VCache_Register
+4.0+     048BH 0002H  VCache_GetSize
+4.0+     048BH 0003H  VCache_CheckAvail
+4.0+     048BH 0004H  VCache_FindBlock
+4.0+     048BH 0005H  VCache_FreeBlock
+4.0+     048BH 0006H  VCache_MakeMRU
+4.0+     048BH 0007H  VCache_Hold
+4.0+     048BH 0008H  VCache_Unhold
+4.0+     048BH 0009H  VCache_Enum
+4.0+     048BH 000AH  VCache_TestHandle
+4.0+     048BH 000BH  VCache_VerifySums
+4.0+     048BH 000CH  VCache_RecalcSums
+4.0+     048BH 000DH  VCache_TestHold
+4.0+     048BH 000EH  VCache_GetStats
+4.0+     048BH 000FH  VCache_Deregister
+4.0+     048BH 0010H  VCache_AdjustMinimum
+4.0+     048BH 0011H  VCache_SwapBuffers
+4.0+     048BH 0012H  VCache_RelinquishPage
+4.0+     048BH 0013H  VCache_UseThisPage
+4.0+     048BH 0014H  _VCache_CreateLookupCache
+4.0+     048BH 0015H  _VCache_CloseLookupCache
+4.0+     048BH 0016H  _VCache_DeleteLookupCache
+4.0+     048BH 0017H  _VCache_Lookup
+4.0+     048BH 0018H  _VCache_UpdateLookup
+4.10+    048BH 0019H  VCache_MakeLRU
+4.10+    048BH 001AH  VCache_RemoveFromLRU
+4.10+    048BH 001BH  VCache_MakeMedian
+4.10+    048BH 001CH  VCache_UnmapCacheBlock
+4.90+    048BH 001DH  VCache_MapCacheBlock
+4.90+    048BH 001EH  VCache_GetDebugWorkArea
 4.0+     048CH        VUDP_Device_ID
 4.0+     048DH        VAsync_Device_ID
 4.0+     048EH        NWREDIR_Device_ID
