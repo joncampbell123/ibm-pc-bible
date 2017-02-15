@@ -12,20 +12,13 @@ Input:
     AH = 0Dh
 
 Output:
-    DL = drive ID
-    Return: CF set on error
 
 Action:
 
     Write modified disk buffers to disk only.
 
 Notes:
-
     XT/AT command.
-    DOS checks for CTRL+C and CTRL+Break keys and executes INT 23h if read.
-
-    Standard input is normally the keyboard. Under DOS 2.0 and higher, standard
-    input can be redirected.
 
 See also:
 
