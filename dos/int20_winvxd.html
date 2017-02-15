@@ -1499,6 +1499,14 @@ Version │ Dev / Srv │ Description
 4.10+    004AH        DDS_DEVICE_ID
 4.0      004BH        VDOSKEYD_DEVICE_ID (not mentioned until Win98 DDK??)
 4.10+    004BH        NTKERN_DEVICE_ID
+4.10+    004BH 0000H  _NTKERN_Get_Version
+4.10+    004BH 0001H  _NtKernGetWorkerThread
+4.10+    004BH 0002H  _NtKernPhysicalDeviceObjectToDevNode
+4.10+    004BH 0003H  _NtKernWin9XLoadDriver
+4.10+    004BH 0004H  _NtKernGetVPICDHandleFromInterruptObj
+4.90+    004BH 0005H  _NtKernPreLoadDriver
+4.90+    004BH 0006H  _NtKernCheckUnPreLoadDriver
+4.90+    004BH 0007H  _NtKernRtInfo
 4.10+    004CH        ACPI_DEVICE_ID
 4.10+    004CH 0000H  ACPI_GetVersion
 4.10+    004CH 0001H  _ACPI_SetSystemPowerState
