@@ -1643,6 +1643,14 @@ Version │ Dev / Srv │ Description
          045BH        ???
          045CH        ???
 3.1+     045DH        VFLATD (Linear framebuffer emulation atop SVGA bank switching)
+         045DH 0000H  VflatD_Query
+         045DH 0001H  VflatD_Get_Video_Base
+         045DH 0002H  VflatD_Reset
+         045DH 0003H  VflatD_Create_Virtual_Frame_Buffer
+         045DH 0004H  VflatD_Create_Physical_Frame_Buffer
+         045DH 0005H  VflatD_Begin_Linear_Access
+         045DH 0006H  VflatD_End_Linear_Access
+         045DH 0007H  VflatD_Query_Bank_Info
          045EH        ???
 4.0+     045FH        MSSNDSYS_Device_ID (Sound Blaster/Windows Sound System)
 
@@ -1852,6 +1860,10 @@ References:
 
   Ralph Brown Interrupt List
     [http://www.ctyme.com/intr/int-21.htm]
+
+  Undocumented VflatD, OS/2 museum
+    [http://www.os2museum.com/wp/undocumented-vflatd/]
+
 </pre></body>
 </html>
 
