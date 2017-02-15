@@ -799,14 +799,32 @@ Version │ Dev / Srv │ Description
 4.0+     000EH 000BH  VCD_Virtualize_Port_Dynamic
 4.0+     000EH 000CH  VCD_Unvirtualize_Port_Dynamic
 3.0+     000FH        VPD_Device_ID
-3.1+     0010H        BlockDev_Device_ID
-3.1+     0010H 0000H  BlockDev_Get_Version
-3.1+     0010H 0001H  BlockDev_Register_Device
-3.1+     0010H 0002H  BlockDev_Find_Int13_Drive
-3.1+     0010H 0003H  BlockDev_Get_Device_List
-3.1+     0010H 0004H  BlockDev_Send_Command
-3.1+     0010H 0005H  BlockDev_Command_Complete
-3.1+     0010H 0006H  BlockDev_Synchronous_Command
+3.1+     0010H        BlockDev_Device_ID / Win95 IOS_Device_ID
+3.1+     0010H 0000H  BlockDev_Get_Version / Win95 IOS_Get_Version
+3.1+     0010H 0001H  BlockDev_Register_Device / Win95 IOS_BD_Register_Device
+3.1+     0010H 0002H  BlockDev_Find_Int13_Drive / Win95 IOS_Find_Int13_Drive
+3.1+     0010H 0003H  BlockDev_Get_Device_List / Win95 IOS_Get_Device_List
+3.1+     0010H 0004H  BlockDev_Send_Command / Win95 IOS_SendCommand
+3.1+     0010H 0005H  BlockDev_Command_Complete / Win95 IOS_BD_Command_Complete
+3.1+     0010H 0006H  BlockDev_Synchronous_Command / Win95 IOS_Synchronous_Command
+4.0+     0010H 0007H  IOS_Register
+4.0+     0010H 0008H  IOS_Requestor_Service
+4.0+     0010H 0009H  IOS_Exclusive_Access
+4.0+     0010H 000AH  IOS_Send_Next_Command
+4.0+     0010H 000BH  IOS_Set_Async_Time_Out
+4.0+     0010H 000CH  IOS_Signal_Semaphore_No_Switch
+4.0+     0010H 000DH  IOSIdleStatus
+4.0+     0010H 000EH  IOSMapIORSToI24
+4.0+     0010H 000FH  IOSMapIORSToI21
+4.0+     0010H 0010H  PrintLog
+4.10+    0010H 0011H  IOS_deregister
+4.10+    0010H 0012H  IOS_wait
+4.10+    0010H 0013H  _IOS_SpinDownDrives
+4.10+    0010H 0014H  _IOS_query_udf_mount
+4.90+    0010H 0015H  _IOS_LockDrive
+4.90+    0010H 0016H  _IOS_UnlockDrive
+4.90+    0010H 0017H  _IOS_IsDriveLocked
+4.90+    0010H 0018H  _IOS_SpinUpDrives
 3.0+     0011H        VMCPD_Device_ID
 4.0+     0011H 0000H  VMCPD_Get_Version
 4.0+     0011H 0001H  VMCPD_Get_Virt_State
