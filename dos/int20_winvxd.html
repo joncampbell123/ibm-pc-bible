@@ -1531,9 +1531,15 @@ Version │ Dev / Srv │ Description
          0441H        ???
          0442H        ???
          0443H        ???
-3.0+     0444H        VADMAD_Device_ID (AUTODMA driver)
-3.0+     0445H        VSBD_Device_ID (Sound Blaster)
-3.0+     0446H        VADLIBD_Device_ID (ADLIB FM)
+3.0+     0444H        VADMAD_Device_ID (AUTODMA driver) (Windows 3.x driver)
+3.0+     0445H        VSBD_Device_ID (Sound Blaster) (Windows 3.x driver)
+3.0+     0446H        VADLIBD_Device_ID (ADLIB FM) (Windows 3.x driver)
+3.0+     0446H 0000H  VADLIBD_Get_Version
+3.0+     0446H 0001H  VADLIBD_Virtualize_Synth
+3.0+     0446H 0002H  VADLIBD_Get_Synth_Focus
+3.0+     0446H 0003H  VADLIBD_Acquire_Synth
+3.0+     0446H 0004H  VADLIBD_Release_Synth
+3.0+     0446H 0005H  VADLIBD_Install_Handler
          0447H        ???
          0448H        ???
          0449H        ???
@@ -1545,6 +1551,27 @@ Version │ Dev / Srv │ Description
 4.0+     044AH 0004H  _MMDEVLDR_RemoveEnvironmentString
 4.0+     044AH 0005H  _MMDEVLDR_AddEnvironmentString
 4.10+    044AH 0006H  _MMDEVLDR_DeviceInitComplete
+         044BH        ???
+4.0+     044CH        MSMPU401_Device_ID (MPU-401)
+4.0+     044DH        MSOPL_Device_ID (ADLIB FM)
+         044EH        ???
+         044FH        ???
+         0450H        ???
+         0451H        ???
+         0452H        ???
+         0453H        ???
+         0454H        ???
+         0455H        ???
+         0456H        ???
+         0457H        ???
+         0458H        ???
+         0459H        ???
+         045AH        ???
+         045BH        ???
+         045CH        ???
+         045DH        ???
+         045EH        ???
+4.0+     045FH        MSSNDSYS_Device_ID (Sound Blaster/Windows Sound System)
 
 4.0+     F000H        BASEID_FOR_NAMEBASEDVXD
 
