@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+<a href="int21.html#ah=0bh" class="ttydoc">INT 21h</a> AH=0BH Check Input Status (DOS 1.0+)
+────────────────────────────────────────────
+
+Input:
+    AH = 0Dh
+
+Output:
+    DL = drive ID
+    Return: CF set on error
+
+Action:
+
+    Write modified disk buffers to disk only.
+
+Notes:
+
+    XT/AT command.
+    DOS checks for CTRL+C and CTRL+Break keys and executes INT 23h if read.
+
+    Standard input is normally the keyboard. Under DOS 2.0 and higher, standard
+    input can be redirected.
+
+See also:
+
+    <a href="int21_ah_06h_dl_ffh.html" class="ttydoc">INT 21H AH=06H DIRECT CONSOLE INPUT</a>
+
+</pre></body>
+</html>
