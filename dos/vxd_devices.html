@@ -23,9 +23,16 @@ VTDA.386      VTD       0005H  Win386 VTD Device
 VTDAPI.386    VTDAPI    0442H  MMSys Win386 VTDAPI Device
 ───────────────────────────────────────────────────────────────────────────────
 
-Some VXDs are "built in" to the Windows kernel. These are stored in VMM32.VXD
-in Windows 3.x, 95, 98, and ME. In the SYSTEM.INI file these are referred to
-with a star (*) and the name of the file.
+Some VXDs are "built in" to the Windows kernel. These are stored in an
+executable file that is loaded on booting the Windows kernel, located in the
+SYSTEM directory. The MS-DOS stub of this executable file starts up the Windows
+kernel and the "extended" EXE contains the built-in drivers.
+
+    Windows 3.0         WIN386.EXE (W3)
+    Windows 3.1         WIN386.EXE (W3)
+    Windows 95          VMM32.VXD (W4)
+    Windows 98          VMM32.VXD (W4)
+    Windows ME          VMM32.VXD (W4)
 
 ═══════════════════════════════════════════════════════════════════════════════
 Name        │ Device  │ ID   │ Description
