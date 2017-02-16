@@ -12,6 +12,9 @@ Included with the name is the device name in the driver header on disk, which
 can differ from the actual name when loaded into memory. Some drivers have no
 name on disk whatsoever, and create the name when initialized.
 
+Block devices do not have names. The same 8-byte field is used for another
+purpose instead. They are listed here with the Device column empty.
+
 MS-DOS device drivers are normally in a flat binary format, which is loaded
 as-is into memory and linked into the device chain. In this format the first
 0x12 bytes contain the next pointer (initialized on disk to FFFF:FFFF), the
