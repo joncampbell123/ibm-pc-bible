@@ -18,6 +18,16 @@ Name        │ Device  │ ID   │ Description
 BLAH.VXD      BLAH      0000H  Blah
 ───────────────────────────────────────────────────────────────────────────────
 
+Some VXDs are "built in" to the Windows kernel. These are stored in VMM32.VXD
+in Windows 3.x, 95, 98, and ME. In the SYSTEM.INI file these are referred to
+with a star (*) and the name of the file.
+
+═══════════════════════════════════════════════════════════════════════════════
+Name        │ Device  │ ID   │ Description
+────────────┴─────────┴──────┴─────────────────────────────────────────────────
+*BLAH         BLAH      0000H  Blah
+───────────────────────────────────────────────────────────────────────────────
+
 VXD device driver list. Name listed is the name of device when loaded in
 memory. Only devices with a consistent name are listed.
 
