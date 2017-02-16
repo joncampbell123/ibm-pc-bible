@@ -29,6 +29,9 @@ As stated above, DOS drivers are free to change the device name in the header
 at any time including initialization. In some cases, the name on disk is a
 dummy string or completely blank.
 
+CD-ROM drivers will commonly pick a default name (usually MSCD0000) but allow
+the DEVICE string in CONFIG.SYS to pick a different name.
+
 Block devices do not have device driver names.
 
 TODO: Need to do second pass through this list to show exactly the device name
