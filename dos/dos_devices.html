@@ -7,10 +7,28 @@
     <body class="ttydoc"><pre class="ttydoc">
 All MS-DOS devices, ordered by name and type.
 
+MS-DOS device driver list. The name listed is the name of the file on disk.
+The name in memory may be different.
+
+═══════════════════════════════════════════════════════════════════════════════
+Name       │ Description
+───────────┴───────────────────────────────────────────────────────────────────
+ASPI2DOS.SYS Adaptec AHA-1510/1520/1522 ASPI Manager for DOS (SCSIMGR$)
+ASPI4DOS.SYS Adaptec AHA-1540/1542/1640 ASPI Manager for DOS (SCSIMGR$)
+ASPI7DOS.SYS Adaptec AIC-7770 ASPI Manager for DOS (SCSIMGR$)
+ASPIEDOS.SYS Adaptec AHA-1740/1742/1744 ASPI Manager for DOS (SCSIMGR$)
+CDMKE.SYS    Matsushita CD-ROM driver
+GCDR420.SYS  Reveal CD-ROM drive GCD-R420 CD-ROM driver
+HIMEM.SYS    MS-DOS XMS (extended memory) driver
+HIMEM.SYS    Microsoft Windows HIMEM.SYS substitute (in WINDOWS directory)
+RAMDRIVE.SYS Microsoft RAM disk block device (usually in WINDOWS directory)
+SOUND.SYS    SC400 Gallant sound driver interface
+───────────────────────────────────────────────────────────────────────────────
 
 MS-DOS character device list. Name listed is the name of device when loaded in
 memory. Only devices with a consistent name are listed. Devices that allow the
-user to change the name (such as CD-ROM drivers) are not listed.
+user to change the name (such as CD-ROM drivers) are not listed. This list
+includes drivers that are "built in" to the DOS kernel.
 
 ═══════════════════════════════════════════════════════════════════════════════
 Name    │ Description
