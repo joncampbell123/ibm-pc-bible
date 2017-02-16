@@ -34,17 +34,13 @@ the DEVICE string in CONFIG.SYS to pick a different name.
 
 Block devices do not have device driver names.
 
-TODO: Need to do second pass through this list to show exactly the device name
-      string on disk. Some drivers were skipped over in that regard because it
-      was obvious the named changed.
-
 ═══════════════════════════════════════════════════════════════════════════════
 Name        │ Device  │ Description
 ────────────┴─────────┴────────────────────────────────────────────────────────
 AEMM.SYS      EMMXXXX0  Expanded Memory Manager (AT&amp;T driver for AST on Windows 2.x install disks)
 ANSI.SYS      CON       MS-DOS console replacement to handle ANSI terminal codes
 ASPI2DOS.SYS  SCSIMGR$  Adaptec AHA-1510/1520/1522 ASPI Manager for DOS
-ASPI2HLP.SYS            ???
+ASPI2HLP.SYS  ASPI2HL$  ???
 ASPI4DOS.SYS  SCSIMGR$  Adaptec AHA-1540/1542/1640 ASPI Manager for DOS
 ASPI7DOS.SYS  SCSIMGR$  Adaptec AIC-7770 ASPI Manager for DOS
 ASPIEDOS.SYS  SCSIMGR$  Adaptec AHA-1740/1742/1744 ASPI Manager for DOS
@@ -69,7 +65,7 @@ HIMEM.SYS     XMSXXXX0  MS-DOS XMS (extended memory) driver
 HIMEM.SYS     XMSXXXX0  Microsoft Windows HIMEM.SYS substitute (in WINDOWS directory)
 IFSHLP.SYS    IFS$HLP$  Microsoft IFS helper driver
 MOUSE.SYS     MS$MOUSE  Mouse driver (?) (in WINDOWS directory, Windows 3.0)
-OAKCDROM.SYS            OTI-91X ATAPI CD-ROM driver, Oak Technology (but functions well as generic IDE driver)
+OAKCDROM.SYS  12345678  OTI-91X ATAPI CD-ROM driver, Oak Technology (but functions well as generic IDE driver)
 PS2EMM.SYS    EMMXXXX0  Expanded Memory Manager (Microsoft PS/2 50/60 on Windows 2.x install disks)
 RAMDRIVE.SYS            Microsoft RAM disk block device (usually in WINDOWS directory)
 REMM.SYS      EMMXXXX0  Expanded Memory Manager (AST driver on Windows 2.x install disks)
