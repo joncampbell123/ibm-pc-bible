@@ -34,31 +34,45 @@ kernel and the "extended" EXE contains the built-in drivers.
     Windows 98          VMM32.VXD (W4)
     Windows ME          VMM32.VXD (W4)
 
+These built-in drivers can be referred to in SYSTEM.INI by an asterisk followed
+by the name (listed in the file) of the VXD.
+
+The following list shows the device= name you use in SYSTEM.INI, the name of
+the VXD listed in the monolithic package, the VXD device name, the ID, and a
+description.
+
 ═══════════════════════════════════════════════════════════════════════════════
-Name        │ Device  │ ID   │ Description
-────────────┴─────────┴──────┴─────────────────────────────────────────────────
-*BIOSXLAT     BIOSXLAT  0013H  (TODO)
-*BLOCKDEV     BLOCKDEV  0010H  (TODO) (Windows 3.1)
-*CDPSCSI      CDPSCSI   ????H  ???
-*COMBUFF      COMBUFF   0000H  (TODO)
-*DOSMGR       DOSMGR    0015H  (TODO)
-*PAGEFILE     PAGEFILE  0021H  (TODO)
-*PAGESWAP     PAGESWAP  0007H  (TODO)
-*PARITY       PARITY    0008H  (TODO)
-*REBOOT       REBOOT    0009H  (TODO)
-*V86MMGR      V86MMGR   0006H  (TODO)
-*VCD          VCD       000EH  (TODO)
-*VDMAD        VDMAD     0004H  (TODO)
-*VFD          VFD       001BH  (TODO)
-*VHD          VHD       0010H  (TODO) (Windows 3.0)
-*VMCPD        VMCPD     0011H  (TODO)
-*VMM          VMM       0001H  Windows virtual machine manager
-*VMPOLL       VMPOLL    0018H  (TODO)
-*VPD          VPD       000FH  (TODO)
-*VPICD        VPICD     0003H  (TODO)
-*VSD          VSD       000BH  (TODO)
-*VTD          VTD       0005H  (TODO)
-*WSHELL       SHELL     0017H  (TODO)
+SYSTEM.INI  │ Name    │ Device   │ ID   │ Description
+────────────┴─────────┴──────────┴──────┴──────────────────────────────────────
+*BIOSXLAT     BIOSXLAT  BIOSXLAT  0013H  (TODO)
+*BLOCKDEV     BLOCKDEV  BLOCKDEV  0010H  (TODO) (Windows 3.1)
+*CDPSCSI      CDPSCSI   CPSSCSI   ????H  ???
+*COMBUFF      COMBUFF   COMBUFF   0000H  (TODO)
+*DOSMGR       DOSMGR    DOSMGR    0015H  (TODO)
+*DOSNET       DOSNET    DOSNET    001AH  (TODO)
+*EBIOS        EBIOS     EBIOS     0012H  (TODO)
+*PAGEFILE     PAGEFILE  PAGEFILE  0021H  (TODO)
+*PAGESWAP     PAGESWAP  PAGESWAP  0007H  (TODO)
+*PARITY       PARITY    PARITY    0008H  (TODO)
+*REBOOT       REBOOT    REBOOT    0009H  (TODO)
+*V86MMGR      V86MMGR   V86MMGR   0006H  (TODO)
+*VCD          VCD       VCD       000EH  (TODO)
+*VDDEGA       VDDEGA    VDD       000AH  (TODO)
+*VDDVGA       VDDVGA    VDD       000AH  (TODO)
+*VDMAD        VDMAD     VDMAD     0004H  (TODO)
+*VFD          VFD       VFD       001BH  (TODO)
+*VHD          VHD       VHD       0010H  (TODO) (Windows 3.0)
+*VKD          VKD       VKD       000DH  (TODO)
+*VMCPD        VMCPD     VMCPD     0011H  (TODO)
+*VMD          VMD       VMD       000CH  (TODO)
+*VMPOLL       VMPOLL    VMPOLL    0018H  (TODO)
+*VNETBIOS     VNETBIOS  VNETBIOS  0014H  (TODO)
+*VPD          VPD       VPD       000FH  (TODO)
+*VPICD        VPICD     VPICD     0003H  (TODO)
+*VSD          VSD       VSD       000BH  (TODO)
+*VTD          VTD       VTD       0005H  (TODO)
+*WIN386       WIN386    VMM       0001H  Windows virtual machine manager (NOTE: impractical to list in SYSTEM.INI)
+*WSHELL       WSHELL    SHELL     0017H  (TODO)
 ───────────────────────────────────────────────────────────────────────────────
 
 VXD device driver list. Name listed is the name of device when loaded in
