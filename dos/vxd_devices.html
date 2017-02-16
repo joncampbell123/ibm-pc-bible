@@ -78,6 +78,72 @@ SYSTEM.INI  │ Name    │ Device   │ ID   │Version│ Description
 *WSHELL       WSHELL    SHELL     0017H  3.0+     (TODO)
 ───────────────────────────────────────────────────────────────────────────────
 
+List of built-in drivers in Windows 3.0, in load order (as listed past the W3
+header in the file C:\WINDOWS\SYSTEM\WIN386.EXE).
+
+    "WIN386  " at @0x00003c00, 12699 bytes
+    "BIOSXLAT" at @0x00024000, 436 bytes
+    "DOSMGR  " at @0x00025c00, 4501 bytes
+    "DOSNET  " at @0x0002d400, 575 bytes
+    "EBIOS   " at @0x0002fc00, 366 bytes
+    "VKD     " at @0x00032400, 2137 bytes
+    "VDDVGA  " at @0x00035800, 2872 bytes
+    "VDDEGA  " at @0x0003fc00, 2890 bytes
+    "PAGESWAP" at @0x00049c00, 1326 bytes
+    "PARITY  " at @0x0004cc00, 329 bytes
+    "REBOOT  " at @0x0004e400, 325 bytes
+    "WSHELL  " at @0x0004fc00, 3068 bytes
+    "VCD     " at @0x00055000, 1251 bytes
+    "COMBUFF " at @0x00057000, 508 bytes
+    "VDMAD   " at @0x00058c00, 1701 bytes
+    "VFD     " at @0x0005c000, 359 bytes
+    "VHD     " at @0x0005dc00, 456 bytes
+    "VMCPD   " at @0x00060400, 454 bytes
+    "VMD     " at @0x00062c00, 668 bytes
+    "VMPOLL  " at @0x00065400, 518 bytes
+    "VNETBIOS" at @0x00066c00, 834 bytes
+    "VPD     " at @0x00069400, 648 bytes
+    "CDPSCSI " at @0x0006bc00, 341 bytes
+    "VPICD   " at @0x0006e400, 1804 bytes
+    "VSD     " at @0x00071400, 399 bytes
+    "VTD     " at @0x00072c00, 728 bytes
+    "V86MMGR " at @0x00074400, 2971 bytes
+
+List of built-in drivers in Windows 3.1, in load order (as listed past the W3
+header in the file C:\WINDOWS\SYSTEM\WIN386.EXE).
+
+    "WIN386  " at @0x00006c00, 15240 bytes
+    "INT13   " at @0x00021c00, 555 bytes
+    "WDCTRL  " at @0x00023400, 682 bytes
+    "VMD     " at @0x00026c00, 776 bytes
+    "VNETBIOS" at @0x00029400, 853 bytes
+    "DOSNET  " at @0x0002bc00, 575 bytes
+    "EBIOS   " at @0x0002e400, 446 bytes
+    "VDDVGA  " at @0x00030c00, 3519 bytes
+    "VKD     " at @0x0003b800, 2316 bytes
+    "VPICD   " at @0x00040400, 2095 bytes
+    "VTD     " at @0x00043400, 1323 bytes
+    "REBOOT  " at @0x00045800, 599 bytes
+    "VDMAD   " at @0x00047400, 1936 bytes
+    "VSD     " at @0x0004a800, 411 bytes
+    "V86MMGR " at @0x0004c400, 3993 bytes
+    "PAGESWAP" at @0x00058c00, 911 bytes
+    "DOSMGR  " at @0x0005b400, 6122 bytes
+    "VMPOLL  " at @0x00067400, 548 bytes
+    "WSHELL  " at @0x00068c00, 3498 bytes
+    "BLOCKDEV" at @0x0006f800, 654 bytes
+    "PAGEFILE" at @0x00072400, 1163 bytes
+    "VFD     " at @0x00075400, 394 bytes
+    "PARITY  " at @0x00076c00, 360 bytes
+    "BIOSXLAT" at @0x00078400, 436 bytes
+    "VCD     " at @0x00079c00, 1203 bytes
+    "VMCPD   " at @0x0007c400, 542 bytes
+    "COMBUFF " at @0x0007ec00, 515 bytes
+    "CDPSCSI " at @0x00080400, 341 bytes
+    "QEMMFIX " at @0x00082c00, 428 bytes
+
+───────────────────────────────────────────────────────────────────────────────
+
 VXD device driver list. Name listed is the name of device when loaded in
 memory. Only devices with a consistent name are listed.
 
