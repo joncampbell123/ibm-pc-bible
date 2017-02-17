@@ -52,7 +52,9 @@ Page Offset in the LE header is relative to the start of the WIN386.EXE file.
 The W4 format is the same as W3, except that the portion of the file past
 the W4 signature is compressed using the same algorithm as DoubleSpace. A W4
 file could be thought of one that starts with the Windows kernel loader like
-W3, followed by a compressed version of what would be the W3 structure.
+W3, followed by a compressed version of what would be the W3 structure. At
+the point where the W4 signature indicates compression, the decompressed
+data past that point becomes the W3 structure.
 
 In DOSLIB, a w4tow3.c utility is provided to decompress W4 files into W3
 format, which can then be analyzed with the same tools as W3 files.
