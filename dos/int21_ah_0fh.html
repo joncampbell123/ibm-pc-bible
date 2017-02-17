@@ -5,19 +5,20 @@
         <link rel="stylesheet" type="text/css" href="ttystyle.css" />
     </head>
     <body class="ttydoc"><pre class="ttydoc">
-<a href="int21.html#ah=0Fh" class="ttydoc">INT 21h</a> AH=0FH Select default disk drive (DOS 1.0+)
+<a href="int21.html#ah=0Fh" class="ttydoc">INT 21h</a> AH=0FH Open file using FCB (DOS 1.0+)
 ────────────────────────────────────────────
 
 Input:
-    AH = 0Eh
+    AH = 0Fh
+    DS:DX = segment:offset of file control block (FCB)
 
 Output:
     DL = new default disk drive number which corresponds to drive letter
-    Return: AL = total number of potentially valid disk drives
+    Return: AL = 0 if file opened or 0xFF if unable to open
 
 Action:
 
-    Select default disk drive.
+    Open file using FCB.
 
 Notes:
 
