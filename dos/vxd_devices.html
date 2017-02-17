@@ -40,6 +40,23 @@ kernel and the "extended" EXE contains the built-in drivers.
     Windows 98          VMM32.VXD (W4)
     Windows ME          VMM32.VXD (W4)
 
+W3 and W4 files are not executable themselves, but contain a library of
+built-in VxD device drivers.
+
+W3 library files contain an uncompressed directory by name, and offsets and
+lengths into the file where the LE header can be found for the driver. LE
+headers are mangled a bit and do not contain an MS-DOS stub. The non-resident
+name table offset is re-used to point to the end of the LE image. The Data
+Page Offset in the LE header is relative to the start of the WIN386.EXE file.
+
+The W4 format is the same as W3, except that the portion of the file past
+the W4 signature is compressed using the same algorithm as DoubleSpace. A W4
+file could be thought of one that starts with the Windows kernel loader like
+W3, followed by a compressed version of what would be the W3 structure.
+
+In DOSLIB, a w4tow3.c utility is provided to decompress W4 files into W3
+format, which can then be analyzed with the same tools as W3 files.
+
 These built-in drivers can be referred to in SYSTEM.INI by an asterisk followed
 by the name (listed in the file) of the VXD.
 
