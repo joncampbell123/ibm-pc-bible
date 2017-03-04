@@ -10,7 +10,6 @@
 
 Input:
     AH = 1bh
-    DS:DX = pointer to disk transfer address (DTA)
 
 Output:
     Return:
@@ -27,11 +26,13 @@ Notes:
 
     Under DOS 1.x, DS:BX points at an actual copy of the FAT; later versions return a pointer to a copy of the FAT's ID byte [2].
     
-    DOS 7.10 (Win95B/Win98) reportedly returns incorrect values in AL and DX for FAT12/FAT16 drives, even though it manages correct results for FAT32 drives (DOS windows are not affected, only real-mode DOS) [2].
+    DOS 7.10 (Win95B/Win98) reportedly returns incorrect values in AL and DX for FAT12/FAT16 drives, 
+    even though it manages correct results for FAT32 drives (DOS windows are not affected, only real-mode DOS) [2].
 
 See also:
 
-sources: 1-http://tippach.business.t-online.de/wdosx/int21api.html#f1b ; 2-http://www.oldlinux.org/Linux.old/docs/interrupts/int-html/rb-2590.htm
+sources: 1-http://tippach.business.t-online.de/wdosx/int21api.html#f1b
+         2-http://www.oldlinux.org/Linux.old/docs/interrupts/int-html/rb-2590.htm
 
 </pre></body>
 </html>
