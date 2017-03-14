@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+<a href="int21.html#ah=24h" class="ttydoc">INT 21h</a> AH=24H Set relative record field in FCB (DOS 1.0+)
+────────────────────────────────────────────
+
+Input:
+    AH = 24h
+    DS:DX = segment:offset of file control block (FCB)
+
+Output:
+    Return: not applicable
+
+Action:
+    Set relative record field in FCB.
+    
+    Modifies opened FCB for random operation.
+    Sets FCB random record field to current sequential block
+	  and record fields. (see source)
+
+Notes:
+
+
+See also:
+
+    source: http://stanislavs.org/helppc/int_21-24.html
+
+</pre></body>
+</html>
