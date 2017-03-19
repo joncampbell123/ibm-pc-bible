@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+<a href="int21.html#ah=28h" class="ttydoc">INT 21h</a> AH=28H Random block write using FCB (DOS 1.0+)
+────────────────────────────────────────────
+
+Input:
+    AH = 28h
+    CX = number of records to read
+    DS:DX = segment:offset of file control block (FCB)
+
+Output:
+    Return: AL = 0 (successful write)
+                 1 (diskette full or read-only)
+                 2 (data transfer area too small)
+	    CX = number of records written
+
+Action:
+    Random block write using FCB.
+    
+
+Notes:
+
+
+See also:
+
+
+</pre></body>
+</html>
