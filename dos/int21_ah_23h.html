@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+<a href="int21.html#ah=23h" class="ttydoc">INT 21h</a> AH=23H Get File Size using FCB (DOS 1.0+)
+────────────────────────────────────────────
+
+Input:
+    AH = 23h
+    DS:DX = segment:offset of file control block (FCB)
+
+Output:
+    Return: AL = 0 (if successful)
+	       = FF (if file not found)
+
+Action:
+    Get File Size using FCB.
+
+Notes:
+
+
+See also:
+
+
+</pre></body>
+</html>

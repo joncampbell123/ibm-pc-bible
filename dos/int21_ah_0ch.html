@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+<a href="int21.html#ah=0Ch" class="ttydoc">INT 21h</a> AH=0CH Clear input buffer and call a function (DOS 1.0+)
+────────────────────────────────────────────
+
+Input:
+    AH = 0Ch
+    AL = 01, 06, 07, 08, or 0A
+
+Output:
+    Return: AL = clear input buffer and call function specified in AL 
+    
+Action:
+
+    Clear input buffer and call a function.
+
+Notes:
+
+See also:
+
+    int21 AH=01, AH=06, AH=07, AH=08, AH=0A
+
+</pre></body>
+</html>

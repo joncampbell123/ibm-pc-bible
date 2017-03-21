@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+<a href="int21.html#ah=21h" class="ttydoc">INT 21h</a> AH=21H Random read using FCB (DOS 1.0+)
+────────────────────────────────────────────
+
+Input:
+    AH = 21h
+    DS:DX = segment:offset of file control block (FCB)
+
+Output:
+    Return: AL = 0 (read successful)
+	       = 1 if EOF (no data read)
+	       = 2 if DTA is too small
+	       = 3 if EOF (partial record read)
+
+Action:
+    Random read using FCB.
+
+Notes:
+
+
+See also:
+
+    http://stanislavs.org/helppc/int_21-21.html
+
+</pre></body>
+</html>

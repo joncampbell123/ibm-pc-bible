@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+<a href="int21.html#ah=29h" class="ttydoc">INT 21h</a> AH=29H Parse a filename using FCB (DOS 1.0+)
+────────────────────────────────────────────
+
+Input:
+    AH = 29h
+    AL = bit pattern to control parsing (see bit meanings below)
+	  DS:SI = pointer to a filespec to parse
+	  ES:DI = pointer to a buffer for unopened FCB
+
+
+Output:
+    Return: AL = 00 if no wildcard characters present
+	   = 01 if wildcards present in string
+	   = FF if drive specifier is invalid
+	  DS:SI = pointer to the first character after parsed filename
+	  ES:DI = pointer to the updated unopened FCB
+
+Action:
+    Parse a filename using FCB.
+    
+
+Notes:
+    source: http://stanislavs.org/helppc/int_21-29.html
+    The above information is unverified from the above site.
+
+See also:
+
+
+</pre></body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+<a href="int21.html#ah=12h" class="ttydoc">INT 21h</a> AH=12H Find next matching file using FCB (DOS 1.0+)
+────────────────────────────────────────────
+
+Input:
+    AH = 12h
+    DS:DX = segment:offset of file control block (FCB)
+
+Output:
+    Return: AL = 0 if found file or 0xFF if file not found
+
+Action:
+
+    Find next matching file using FCB.
+
+Notes:
+
+"?" wildcard recognized in >= DOS 2.1
+"*" recognized in >= DOS 3.x
+
+This function used after a related call to AH=11H or AH=12H
+
+See also:
+
+Int21/AH=11H, Int21/AH=12H
+
+</pre></body>
+</html>
