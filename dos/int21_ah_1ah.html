@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+<a href="int21.html#ah=1ah" class="ttydoc">INT 21h</a> AH=1AH Set disk transfer address (DTA) (DOS 1.0+)
+────────────────────────────────────────────
+
+Input:
+    AH = 1ah
+    DS:DX = pointer to disk transfer address (DTA)
+
+Output:
+    Return: not applicable
+
+Action:
+
+    Set disk transfer address (DTA).
+
+Notes:
+
+    DTA cannot overlap 64k boundary.
+
+See also:
+
+    http://stanislavs.org/helppc/int_21-1a.html
+
+</pre></body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+<a href="int21.html#ah=1bh" class="ttydoc">INT 21h</a> AH=1BH Get allocation information for default drive (DOS 1.0+)
+────────────────────────────────────────────
+
+Input:
+    AH = 1bh
+
+Output:
+    Return:
+        AL = sectors per cluster
+        CX = bytes per sector
+        DX = total number of clusters 
+        DS:BX -> pointer to Media Descriptor Byte found in FAT
+
+Action:
+
+    Get allocation information for default drive.
+
+Notes:
+
+    Under DOS 1.x, DS:BX points at an actual copy of the FAT; later versions return a pointer to a copy of the FAT's ID byte [2].
+    
+    DOS 7.10 (Win95B/Win98) reportedly returns incorrect values in AL and DX for FAT12/FAT16 drives, 
+    even though it manages correct results for FAT32 drives (DOS windows are not affected, only real-mode DOS) [2].
+    
+    Retrieves information on capacity and format of default drive [3].
+    
+    DS:BX can be used to determine if drive is RAMDISK or removable [3].
+
+See also:
+
+sources: 1-http://tippach.business.t-online.de/wdosx/int21api.html#f1b
+         2-http://www.oldlinux.org/Linux.old/docs/interrupts/int-html/rb-2590.htm
+         3-http://stanislavs.org/helppc/int_21-1b.html
+
+</pre></body>
+</html>

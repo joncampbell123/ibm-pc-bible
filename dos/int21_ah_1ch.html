@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+<a href="int21.html#ah=1ch" class="ttydoc">INT 21h</a> AH=1CH Get Allocation Table Info for Specified Drive (DOS 1.0+)
+────────────────────────────────────────────
+
+Input:
+    AH = 1ch
+
+Output:
+    Return:
+        AL = sectors per cluster ; or =FFh if function unsuccessful and invalid drive or critical error
+        CX = bytes per sector
+        DX = total number of clusters 
+        DS:BX -> pointer to Media Descriptor Byte found in FAT
+
+Action:
+
+    Get Allocation Table Info for Specified Drive.
+
+Notes:
+
+    Retrieves information on capacity and format of specified drive.
+    DS:BX can be used to determine if drive is a ramdisk or removable.
+
+See also:
+
+    source: http://stanislavs.org/helppc/int_21-1c.html
+
+</pre></body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+<a href="int21.html#ah=17h" class="ttydoc">INT 21h</a> AH=17H Rename file using FCB (DOS 1.0+)
+────────────────────────────────────────────
+
+Input:
+    AH = 17h
+    DS:DX = segment:offset of modified file control block (FCB)
+    	Offset     
+	    00	   drive designation
+	    01	   original file name
+	    09	   original file extension
+	    11	   new file name
+	    19	   new extension
+
+Output:
+    Return: AL = 0 (successful)
+                 FF (unsuccessful)
+
+Action:
+
+    Rename file using FCB.
+
+Notes:
+
+    Source: http://stanislavs.org/helppc/int_21-17.html
+
+See also:
+
+</pre></body>
+</html>

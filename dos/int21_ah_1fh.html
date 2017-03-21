@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ttystyle.css" />
+    </head>
+    <body class="ttydoc"><pre class="ttydoc">
+<a href="int21.html#ah=1fh" class="ttydoc">INT 21h</a> AH=1FH Retrieve pointer to current drive parameter table (DOS 1.0+)
+────────────────────────────────────────────
+
+Input:
+    AH = 1fh
+    DL = drive number (0=default, 1=A, ...)
+
+Output:
+	on return:
+	    AL = 00  DS:BX is pointer to drive parameter table  (DPT)
+	     FF  drive does not exist
+	     DS:BX = pointer to drive parameter table (DPT) if AL=0
+
+Action:
+
+
+Notes:
+
+
+See also:
+
+    source: http://stanislavs.org/helppc/int_21.html
+
+</pre></body>
+</html>
