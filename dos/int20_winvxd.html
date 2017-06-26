@@ -1289,10 +1289,10 @@ Version │ Dev / Srv │ Description
 4.0+     002CH        SPOOLER_DEVICE_ID
 4.0+     002DH        WIN32S_DEVICE_ID
 4.0+     002EH        DEBUGCMD_DEVICE_ID
-         002FH        ???
-         0030H        ???
-4.0+     0031H        VNB_Device_ID (NETBEUI)
-4.0+     0032H        SERVER_Device_ID
+         002FH        RESERVED_DEVICE_ID [according to Win95 DDK]
+         0030H        ATI_HELPER_DEVICE_ID "grabbed by ATI" [according to Win95 DDK]
+3.1+     0031H        VNB_Device_ID (NETBEUI) (Windows for Workgroups)
+3.1+     0032H        SERVER_Device_ID (Windows for Workgroups)
 4.0+     0033H        CONFIGMG_DEVICE_ID
 4.0+     0033H 0000H  _CONFIGMG_Get_Version
 4.0+     0033H 0001H  _CONFIGMG_Initialize
@@ -1450,9 +1450,9 @@ Version │ Dev / Srv │ Description
 4.10+    0038H 0003H  VCOND_GrbRepaintRect
 4.10+    0038H 0004H  VCOND_GrbSetCursorPosition
 4.10+    0038H 0005H  VCOND_GrbNotifyWOA
-         0039H        ???
-         003AH        ???
-         003BH        ???
+3.1      0039H        VFAT Helper device (Windows for Workgroups) [passing reference in Win95 DDK]
+3.1      003AH        EFAX_DEVICE_ID (Windows for Workgroups) [according to Win95 DDK]
+3.1      003BH        DSVXD_DEVICE_ID (MS-DOS 6.1 DoubleSpace VxD API) [according to Win95 DDK]
 4.0+     003CH        ISAPNP_DEVICE_ID
 4.0+     003DH        BIOS_DEVICE_ID
 4.0+     003EH        WSOCK_DEVICE_ID
