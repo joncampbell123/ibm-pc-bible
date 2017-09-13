@@ -39,32 +39,32 @@ PIC         0EH   IRQ 6 - Floppy controller interrupt
 CPU         0FH   Reserved exception
 PIC         0FH   IRQ 7 - LPT1 interrupt, possibly the Sound Card
 PIC         0FH   IRQ 7 - Cascade interrupt from second PIC (NEC PC-98)
-BIOS        10H   Video BIOS functions
-CPU         10H   Numeric Coprocessor Fault exception
+BIOS        10H   Video BIOS functions (PC/XT/AT+)
+CPU         10H   Numeric Coprocessor Fault exception (AT+)
 PIC         10H   IRQ 8 - LPT1 interrupt (NEC PC-98 V30), Numeric data processor (NEC PC-98 80286)
-BIOS        11H   Equipment list
+BIOS        11H   Equipment list (PC/XT/AT+)
 PIC         11H   IRQ 9 - General adapter (NEC PC-9801), IDE controller (NEC PC-9821 with IDE controller)
-BIOS        12H   Memory size
+BIOS        12H   Memory size (PC/XT/AT+)
 PIC         12H   IRQ 10 - General adapter (NEC PC-98)
-BIOS        13H   Floppy and Hard drive functions
+BIOS        13H   Floppy and Hard drive functions (PC/XT/AT+)
 PIC         13H   IRQ 11 - General adapter (NEC PC-98)
-BIOS        14H   Serial communications
+BIOS        14H   Serial communications (PC/XT/AT+)
 PIC         14H   IRQ 12 - General adapter (NEC PC-98)
-BIOS        15H   System services
+BIOS        15H   System services (PC/XT/AT+)
 PIC         15H   IRQ 13 - General adapter (NEC PC-98)
-BIOS        16H   Keyboard services
+BIOS        16H   Keyboard services (PC/XT/AT+)
 PIC         16H   IRQ 14 - Numeric data processor (NEC PC-98 V30), General adapter (NEC PC-98)
-BIOS        17H   Parallel printer port services
+BIOS        17H   Parallel printer port services (PC/XT/AT+)
 PIC         17H   IRQ 15 - System CMOS / Real Time Clock (NEC PC-98)
 BIOS        18H   ROM BASIC (PC)
 BIOS        18H   BIOS boot failure (XT, AT+)
-BIOS        19H   Bootstrap loader
-BIOS        1AH   Time/Date services
-BIOS        1BH   Keyboard Break key interrupt
-BIOS        1CH   Timer tick interrupt
-BIOS        1DH   Video parameter table (DATA, not CODE)
-BIOS        1EH   Disk parameter table (DATA, not CODE)
-BIOS        1FH   Video graphics 8x8 font, first 128 chars (DATA, not CODE)
+BIOS        19H   Bootstrap loader (PC/XT/AT+)
+BIOS        1AH   Time/Date services (PC/XT/AT+)
+BIOS        1BH   Keyboard Break key interrupt (PC/XT/AT+)
+BIOS        1CH   Timer tick interrupt (PC/XT/AT+)
+BIOS        1DH   Video parameter table (DATA, not CODE) (PC/XT/AT+)
+BIOS        1EH   Disk parameter table (DATA, not CODE) (PC/XT/AT+)
+BIOS        1FH   Video graphics 8x8 font, first 128 chars (DATA, not CODE) (PC/XT/AT+)
 DOS         20H   Terminate program
 <a name="int20h_winvxd" id="int20h_winvxd"></a>Windows     <a href="int20_winvxd.html" class="ttydoc">20H   Windows VxDcall/VxDjmp inter-VxD call (386 enhanced mode)</a>
 <a name="int21h" id="int21h"></a>DOS         <a href="int21.html" class="ttydoc">21H   DOS system services</a>
