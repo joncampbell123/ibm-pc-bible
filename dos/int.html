@@ -20,16 +20,17 @@ BIOS        05H   Print Screen
 CPU         06H   Invalid Opcode exception (80186/80286+)
 CPU         07H   Math Coprocessor Not Present exception
 CPU         08H   Double fault exception
-PIC         08H   IRQ 0 - System timer interrupt (can be relocated at PIC)
+PIC         08H   IRQ 0 - System timer interrupt (can be relocated at PIC) (PC/XT/AT+ and NEC PC-98)
 CPU         09H   Math Coprocessor Segment Overrun exception
-PIC         09H   IRQ 1 - Keyboard interrupt (can be relocated at PIC)
+PIC         09H   IRQ 1 - Keyboard interrupt (can be relocated at PIC) (PC/XT/AT+ and NEC PC-98)
 CPU         0AH   Invalid Task Segment State exception
 PIC         0AH   IRQ 2 - Cascade interrupt from second PIC (AT+)
 PIC         0AH   IRQ 2 - General adapter interrupt (PC/XT)
+PIC         0AH   IRQ 2 - Vertical retrace (PC/XT/AT with specific EGA/VGA cards, NEC PC-9821)
 CPU         0BH   Segment Not Present exception
-PIC         0BH   IRQ 3 - Serial port COM2 interrupt
+PIC         0BH   IRQ 3 - Serial port COM2 interrupt (PC/XT/AT+)
 CPU         0CH   Stack Segment overflow exception
-PIC         0CH   IRQ 4 - Serial port COM1 interrupt
+PIC         0CH   IRQ 4 - Serial port COM1 interrupt (PC/XT/AT+, and NEC PC-98)
 CPU         0DH   General Protection Fault exception
 PIC         0DH   IRQ 5 - General adapter, LPT2 interrupt (AT+)
 PIC         0DH   IRQ 5 - Fixed disk interrupt (PC/XT)
@@ -37,6 +38,7 @@ CPU         0EH   Page fault exception
 PIC         0EH   IRQ 6 - Floppy controller interrupt
 CPU         0FH   Reserved exception
 PIC         0FH   IRQ 7 - LPT1 interrupt, possibly the Sound Card
+PIC         0FH   IRQ 7 - Cascade interrupt from second PIC (NEC PC-98)
 BIOS        10H   Video BIOS functions
 CPU         10H   Numeric Coprocessor Fault exception
 BIOS        11H   Equipment list
