@@ -26,7 +26,7 @@ PIC         09H   IRQ 1 - Keyboard interrupt (can be relocated at PIC) (PC/XT/AT
 CPU         0AH   Invalid Task Segment State exception
 PIC         0AH   IRQ 2 - Cascade interrupt from second PIC (AT+)
 PIC         0AH   IRQ 2 - General adapter interrupt (PC/XT)
-PIC         0AH   IRQ 2 - Vertical retrace (PC/XT/AT with specific EGA/VGA cards, NEC PC-9821)
+PIC         0AH   IRQ 2 - Vertical retrace (PC/XT and AT with IRQ 9 to IRQ 2 mapping, with specific EGA/VGA cards, and IRQ 2 ONLY on NEC PC-9821)
 CPU         0BH   Segment Not Present exception
 PIC         0BH   IRQ 3 - Serial port COM2 interrupt (PC/XT/AT+)
 CPU         0CH   Stack Segment overflow exception
